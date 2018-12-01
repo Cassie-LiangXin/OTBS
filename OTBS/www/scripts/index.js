@@ -23,7 +23,7 @@
         $("#btnLogin").bind("click", function () {
             if ($("#LoginForm").valid()) {
                 //login();
-                window.location = "makereservation.html";
+                window.location = "homepage.html";
             }
         });
 
