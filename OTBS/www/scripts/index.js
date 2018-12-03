@@ -8,7 +8,7 @@
 
         $("#LoginForm").validate({
             messages: {
-                txtLogin: "User ID is required",
+                txtLogin: "User Id is required",
                 txtPassword: "Password is required",
             },
             focusInvalid: false,

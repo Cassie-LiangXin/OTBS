@@ -1,11 +1,23 @@
 ﻿(function () {
     "use strict";
-
+    //Button1
     $(document).ready(function () {
-        $("#btntestfunction").bind("click", function () {
+        $("#btnFacilities").bind("click", function () {
+            window.location = "facilities.html";
+        });
+    });
+    //Button2
+    $(document).ready(function () {
+        $("#btnFoodDelivery").bind("click", function () {
+            
+            //window.location = "?????.html";
+        });
+    });
+    //Button3
+    $(document).ready(function () {
+        $("#btnHouseKeeping").bind("click", function () {
 
-            alert("hello");
-            window.location = "index.html";
+            //window.location = "?????.html";
         });
     });
 
