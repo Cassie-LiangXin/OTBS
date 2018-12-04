@@ -1,5 +1,4 @@
-﻿
-<html>
+﻿<html>
 <head>
     <!--
         Customize the content security policy in the meta tag below as needed. Add 'unsafe-inline' to default-src to enable inline JavaScript.
@@ -19,40 +18,27 @@
     <script src="lib/jquery.mobile-1.4.5.min.js"></script>
     <script src="lib/jquery.validate.min.js"></script>
     <script src="scripts/common.js"></script>
-    <script src="scripts/index.js"></script>
+    <script src="scripts/confirmbooking.js"></script>
 
     <title>Civil Service Club</title>
 </head>
+
 <body>
+
     <div class="app">
         <div data-role="main" class="ui-content">
-            <form name="wageform" id="wageform">
-                <div class="ui-field-contain">
-
-                    <label for="search">Search:</label>
-                    <input type="search" name="search" id="search" placeholder="Search for content...">
-                    <input type="submit" data-inline="true" value="Submit">
+            
+            <div id="items"></div>
+                <div id="times"></div>
+                <div id="txtPN"></div>
+                <div id="txtdate"></div>
+            <div id="txtNop"></div>
                 </div>
-            </form>
 
-            <div class="ui-field-contain">
-                <button value="FACILITIES"> <img width="250" height="150" id="btnFacilities" src="images/DSC_2951.jpg" /></button>
-            </div>
-            <div class="ui-field-contain">
-                <button><img width="250" height="150" id="btnFoodDelivery" src="images/burger-app-food-delivery-ui-case-study-tubik.jpg" /></button>
-            </div>
-            <div class="ui-field-contain">
-                <button> <img width="250" height="150" id="btnHouseKeeping" src="images/jet-set-hotel-housekeeping.jpg" /></button>
-            </div>
-     
+    </div>
 
-
-
-            </div>
-        </div>
-  
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="scripts/platformOverrides.js"></script>
-    <script type="text/javascript" src="scripts/makereservation.js"></script>
+    <script type="text/javascript" src="scripts/confirmbooking.js"></script>
 </body>
 </html>
