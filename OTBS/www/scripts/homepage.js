@@ -1,8 +1,5 @@
-﻿(function () {
-    "use strict";
-    //Reservations
-    $(document).ready(function () {
-        $("#btnReservations").bind("click", function () {
-            window.location = "reservations.html";
-        });
+﻿$(document).ready(function () {
+    $('.next').on('click'.function(){
+        console.log('clicked');
     });
+});

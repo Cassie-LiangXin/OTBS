@@ -11,6 +11,7 @@
 
     <link rel="stylesheet" type="text/css" href="css/index.css">
     <link rel="stylesheet" href="css/jquery.mobile-1.4.5.css">
+    <link rel="stylesheet" href="css/index.css" />
 
     <script src="lib/jquery-1.11.2.min.js"></script>
     <script src="lib/jquery.mobile-1.4.5.min.js"></script>
@@ -28,40 +29,21 @@
         <h1>Welcome</h1>
         <a id="logo" href="https://www.csc.sg/">
             <span>
-                <img src="images/csclogo.jpg" alt="logo"
+                <img src="css/website_images/csclogo.jpg" alt="logo"
                      height="20" width="20" />
             </span>
         </a>
-        <div class="app">
-        <div data-role="main" class="ui-content">
-            <form name="wageform" id="wageform">
-                <div class="ui-field-contain">
 
-                    <label for="search">Search:</label>
-                    <input type="search" name="search" id="search" placeholder="Search for content...">
-                    <input type="submit" data-inline="true" value="Submit">
+        <div c;ass="container">
+            <h1>Slider</h1>
+            <div class="slider-outer">
+                <img src="css/website_images/arrow-left.png" class="prev" alt="Prev" />
+                <div class"slider-inner">
+                    <img src="css/website_images/entrance.jpg" class="active" />
+                    <img src="css/website_images/event.jpg" />
                 </div>
-            </form>
-
-                <div class="ui-field-contain">
-                    <button value="RESERVATIONS"> <img width="250" height="150" id="btnReservations" src="images/reservation.jpg" /></button>
-
-
-
-
-
-                </div>
+                <img src="css/website_images/arrow-right.png" class="next" alt="Next" />
             </div>
-
-            <section>
-                <ul>
-
-                    
-                    <li><a href="news.html">Newsfeed</a></li>
-                    <li><a href="reservations.html">Reservations</a></li>
-                </ul>
-            </section>
-            
         </div>
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="scripts/platformOverrides.js"></script>
