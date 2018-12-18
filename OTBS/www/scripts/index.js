@@ -3,9 +3,9 @@
 
     var userid;
     var password;
-
+  
     $(document).ready(function () {
-
+  
         $("#LoginForm").validate({
             messages: {
                 txtLogin: "User Id is required",
@@ -23,7 +23,20 @@
         $("#btnLogin").bind("click", function () {
             if ($("#LoginForm").valid()) {
                 //login();
-                window.location = "homepage.html";
+               // window.location = "homepage.html";
+                var x = "13";
+                var y = "17";
+                var a = parseInt(x);
+                var b = parseFloat(y);
+                if (isNaN(a)) {
+                    alert("not a number");
+                }
+                else {
+                    if (a + a > 13) {
+                        alert(x + x);
+                    }
+                }
+                alert(b + b);
             }
         });
 
