@@ -3,12 +3,12 @@
 
     var userid;
     var password;
-  
+
     $(document).ready(function () {
-  
+
         $("#LoginForm").validate({
             messages: {
-                txtLogin: "User Id is required",
+                txtLogin: "User ID is required",
                 txtPassword: "Password is required",
             },
             focusInvalid: false,
@@ -21,30 +21,28 @@
         });
 
         $("#btnLogin").bind("click", function () {
-            if ($("#LoginForm").valid()) {
-                //login();
-               // window.location = "homepage.html";
-                var x = "13";
-                var y = "17";
-                var a = parseInt(x);
-                var b = parseFloat(y);
-                if (isNaN(a)) {
-                    alert("not a number");
-                }
-                else {
-                    if (a + a > 13) {
-                        alert(x + x);
-                    }
-                }
-                alert(b + b);
-            }
+            //if ($("#LoginForm").valid()) {
+               // login();
+            window.location = "homepage.html";
+            //}
         });
 
         $("#btnNewUser").bind("click", function () {
             window.location = "newuser.html";
         });
 
-    }); 
+        $("#btnshowlogin").bind("click", function () {
+          
+            document.getElementById("showloginform").style.display = "block";
+            document.getElementById("shownewuserform").style.display = "none";
+          
+        });
+
+        $("#btnshownewuser").bind("click", function () {
+            document.getElementById("shownewuserform").style.display = "block";
+            document.getElementById("showloginform").style.display = "none";
+        });
+    });
 
     function login() {
         var url = serverURL() + "/login.php";
@@ -77,9 +75,30 @@
             localStorage.setItem("userid", userid);
             localStorage.setItem("password", password);
             validationMsgs("Login OK", "Information", "OK");
+            window.location = "me.html";
         }
         else {
             validationMsgs("Error in Username or Password", "Validation", "Try Again");
         }
     }
-} )();
+    function showlogin() {
+        var showlogin = document.getElementById("showloginform");
+        if (showlogin.style.display === "none") {
+            showlogin.style.display = "block";
+        } else {
+            showlogin.style.display = "none";
+        }
+    }
+
+    function shownewuser() {
+        var shownewuser = document.getElementById("shownewuserform");
+        if (shownewuser.style.display === "none") {
+            shownewuser.style.display = "block";
+        } else {
+            shownewuser.style.display = "none";
+        }
+    }
+
+    showlogin();
+    shownewuser();
+})();

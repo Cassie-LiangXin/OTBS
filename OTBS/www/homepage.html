@@ -1,5 +1,5 @@
 ﻿<html>
-<head>   
+<head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
     <meta name="format-detection" content="telephone=no">
     <meta name="msapplication-tap-highlight" content="no">
@@ -12,7 +12,7 @@
     <script src="lib/jquery.mobile-1.4.5.min.js"></script>
     <script src="lib/jquery.validate.min.js"></script>
     <script src="scripts/homepage.js"></script>
-
+    <script src="scripts/common.js"></script>
     <title>Civil Service Club</title>
 </head>
 
@@ -31,19 +31,36 @@
             </div><!-- /navbar -->
         </div><!-- /header -->
 
-        <a href="#">
-            <img src="css/website_images/entrance.jpg"
-                 style="width:400px;height:200px;border:0," />
-        </a>
-        <a href="reservations.html">
-            <img src="css/website_images/event.jpg"
-                 style="width:400px;height:200px;border:0," />
-        </a>
-        <a href="facilities.html">
-            <img src="css/website_images/reservation.jpg"
-                 style="width:400px;height:200px;border:0," />
-        </a>
+        <table id="t01">
 
+            <tr>
+                <td>
+                    <button onclick="gotomakereservationpage()">
+                        <img  src="css/website_images/entrance.jpg" style="width:140px;height:80px;">
+                    </button>Make Reservation
+                </td>
+                <td>
+                    <button>
+                        <img src="css/website_images/event.jpg" style="width:140px;height:80px;">
+                    </button>Reservation List
+                </td>
+
+            </tr>
+    <tr>
+        <td>
+            <button onclick="gotocustomerprofile()">
+                <img src="css/website_images/reservation.jpg" style="width:140px;height:80px;">
+            </button>Customer Profile
+        </td>
+        <td>
+            <button>
+                <img src="css/website_images/cordova.png" style="width:140px;height:80px;">
+            </button>Customer Support
+        </td>
+
+    </tr>
+    </table>
+        </div>
 </body>
     </html>
 

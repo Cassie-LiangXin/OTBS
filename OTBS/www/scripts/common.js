@@ -28,3 +28,7 @@ function getRadioValue(groupName) {
     } catch (e) { }
     return _result;
 }
+
+function gotomakereservationpage() { window.location = "makereservation.html"; }
+
+function gotocustomerprofile() { window.location = "customerprofile.html"; }
