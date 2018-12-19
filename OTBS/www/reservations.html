@@ -1,8 +1,5 @@
-﻿<!DOCTYPE html>
-<html>
+﻿<html>
 <head>
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: http://jacksonng.org https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
-
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
     <meta name="format-detection" content="telephone=no">
     <meta name="msapplication-tap-highlight" content="no">
@@ -14,25 +11,59 @@
     <script src="lib/jquery-1.11.2.min.js"></script>
     <script src="lib/jquery.mobile-1.4.5.min.js"></script>
     <script src="lib/jquery.validate.min.js"></script>
+    <script src="scripts/reservation.js"></script>
     <script src="scripts/common.js"></script>
-    <script src="scripts/index.js"></script>
-
     <title>Civil Service Club</title>
 </head>
+
 <body>
-    <div>
-        <h2>Reservation</h2>
+    <div data-role="page">
+        <div data-role="header" class="header" data-position="fixed">
+            <a href="#" class="ui-btn ui-icon-home ui-btn-icon-left">More</a>
+            <h1>Civil service club</h1>
+            <a href="#" class="ui-ben ui-icon-phone ui-btn-icon-right">Contact Us</a>
+        </div>
+
+
+
+        <table id="t01">
+
+            <tr>
+                <td>
+                    <button onclick="gotomakereservationpage()">
+                        <img src="css/website_images/entrance.jpg" style="width:140px;height:80px;">
+                    </button>Make Reservation
+                </td>
+                <td>
+                    <button>
+                        <img src="css/website_images/event.jpg" style="width:140px;height:80px;">
+                    </button>Reservation List
+                </td>
+
+            </tr>
+            <tr>
+                <td>
+                    <button onclick="gotocustomerprofile()">
+                        <img src="css/website_images/reservation.jpg" style="width:140px;height:80px;">
+                    </button>Customer Profile
+                </td>
+                <td>
+                    <button>
+                        <img src="css/website_images/cordova.png" style="width:140px;height:80px;">
+                    </button>Customer Support
+                </td>
+
+            </tr>
+        </table>
+        <div data-role="footer" class="footer" data-position="fixed">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#" data-icon="info">News</a></li>
+                    <li><a href="#" data-icon="search">Reservation</a></li>
+                    <li><a href="#" data-icon="star">Three</a></li>
+                </ul>
+            </div>
+        </div>
     </div>
-    <section>
-        <ul>
-            <li><a href="makereservation.html">Make Reservation</a></li>
-            <li><a href="viewreservation.html">View Reservations</a></li>
-            <li><a href="cancelreservation.html">Cancel Reservation</a></li>
-            <li><a href="feedback.html">Feedback</a></li>
-
-        </ul>
-    </section>
 </body>
-
-
 </html>

@@ -32,3 +32,11 @@ function getRadioValue(groupName) {
 function gotomakereservationpage() { window.location = "makereservation.html"; }
 
 function gotocustomerprofile() { window.location = "customerprofile.html"; }
+
+function news() {
+    window.location = "homepage.html";
+}
+
+function reservation() {
+    window.location = "reservations.html";
+}

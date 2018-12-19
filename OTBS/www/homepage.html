@@ -18,50 +18,60 @@
 
 <body>
     <div data-role="page">
-        <div data-role="header">
-            <h1>Civil service club Changi</h1>
+
+        <div data-role="header" class="header" data-position="fixed">
+            <a href="#" id="btnContact" class="ui-ben ui-icon-phone ui-btn-icon-right">Contact</a>
+            <h1>Civil service club</h1>
+            <span class="ui-btn ui-icon-home ui-btn-icon-left" onclick="openNav()">Setting</span>
         </div>
-        <div data-role="header" style="overflow:hidden;">
+
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Clients</a>
+            <a href="#">Contact</a>
+        </div>
+
+        <div id="main" data-role="main" class="ui-content">
+            <nav aria-label="Page navigation example">
+                <ul class="pagination">
+                    <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+
+
+
+
+        <div data-role="footer" class="footer" data-position="fixed">
             <div data-role="navbar">
                 <ul>
-                    <li><a href="#">One</a></li>
-                    <li><a href="#">Two</a></li>
-                    <li><a href="#">Three</a></li>
+                    <li><a href="#" data-icon="info" id="btnNews">News</a></li>
+                    <li><a href="#" data-icon="search" id="btnReservation">Reservation</a></li>
+                    <li><a href="#" data-icon="star" id="btnThree">Three</a></li>
                 </ul>
-            </div><!-- /navbar -->
-        </div><!-- /header -->
-
-        <table id="t01">
-
-            <tr>
-                <td>
-                    <button onclick="gotomakereservationpage()">
-                        <img  src="css/website_images/entrance.jpg" style="width:140px;height:80px;">
-                    </button>Make Reservation
-                </td>
-                <td>
-                    <button>
-                        <img src="css/website_images/event.jpg" style="width:140px;height:80px;">
-                    </button>Reservation List
-                </td>
-
-            </tr>
-    <tr>
-        <td>
-            <button onclick="gotocustomerprofile()">
-                <img src="css/website_images/reservation.jpg" style="width:140px;height:80px;">
-            </button>Customer Profile
-        </td>
-        <td>
-            <button>
-                <img src="css/website_images/cordova.png" style="width:140px;height:80px;">
-            </button>Customer Support
-        </td>
-
-    </tr>
-    </table>
+            </div>
         </div>
+
+    </div>
+
+
+
 </body>
     </html>
-
-

@@ -17,7 +17,7 @@
     $(document).ready(function () {
         $("#btnHouseKeeping").bind("click", function () {
 
-            //window.location = "?????.html";
+            window.location = "housekeeping.html";
         });
     });
 
