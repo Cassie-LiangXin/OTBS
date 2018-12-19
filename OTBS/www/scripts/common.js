@@ -1,5 +1,5 @@
 function serverURL() {
-    //return "http://jacksonng.org/friendszone";
+    //return "";
 }
 
 function validationMsgs(message, title, button) {
