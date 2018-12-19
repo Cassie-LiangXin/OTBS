@@ -42,6 +42,26 @@
             document.getElementById("shownewuserform").style.display = "block";
             document.getElementById("showloginform").style.display = "none";
         });
+
+        $("#minusSlides").bind("click", function () {
+            plusSlides(-1);
+        });
+
+        $("#plusSlides").bind("click", function () {
+            plusSlides(1);
+        });
+
+        $("#Slides1").bind("click", function () {
+            currentSlide(1);
+        });
+        $("#Slides2").bind("click", function () {
+            currentSlide(2);
+        });
+        $("#Slides3").bind("click", function () {
+            currentSlide(3);
+        });
+
+
     });
 
     function login() {
@@ -81,6 +101,7 @@
             validationMsgs("Error in Username or Password", "Validation", "Try Again");
         }
     }
+
     function showlogin() {
         var showlogin = document.getElementById("showloginform");
         if (showlogin.style.display === "none") {
@@ -99,8 +120,6 @@
         }
     }
 
-    showlogin();
-    shownewuser();
 
     var slideIndex = 1;
     showSlides(slideIndex);
@@ -112,6 +131,7 @@
 
     // Thumbnail image controls
     function currentSlide(n) {
+
         showSlides(slideIndex = n);
     }
 
@@ -119,8 +139,8 @@
         var i;
         var slides = document.getElementsByClassName("mySlides");
         var dots = document.getElementsByClassName("dot");
-        if (n > slides.length) { slideIndex = 1 }
-        if (n < 1) { slideIndex = slides.length }
+        if (n > slides.length) { slideIndex = 1; }
+        if (n < 1) { slideIndex = slides.length; }
         for (i = 0; i < slides.length; i++) {
             slides[i].style.display = "none";
         }
@@ -130,4 +150,13 @@
         slides[slideIndex - 1].style.display = "block";
         dots[slideIndex - 1].className += " active";
     }
+
+
+    //excute on start
+    showlogin();
+    shownewuser();
+    currentSlide(1);
+
+
+
 })();
