@@ -30,6 +30,10 @@
         $("#btnNewUser").bind("click", function () {
             window.location = "newuser.html";
         });
+        
+         $("#forgetpassword").bind("click", function () {
+            window.location = "forgetpassword.html";
+        });
 
         $("#btnshowlogin").bind("click", function () {
           
