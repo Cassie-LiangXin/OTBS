@@ -104,3 +104,12 @@
         opacity: 1
     }
 }
+img {
+    animation: myAnimation 0.8s ease 0.05s 1 alternate forwards;
+}
+
+@keyframes myAnimation {
+    100% {
+        transform: rotate(360deg);
+    }
+}

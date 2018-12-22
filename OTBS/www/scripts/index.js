@@ -3,7 +3,7 @@
 
     var userid;
     var password;
-
+    var myVar;
     $(document).ready(function () {
 
         $("#LoginForm").validate({
@@ -22,8 +22,12 @@
 
         $("#btnLogin").bind("click", function () {
             //if ($("#LoginForm").valid()) {
-               // login();
-            window.location = "homepage.html";
+            // login();   
+            document.getElementById("loader").style.display = "block";
+            document.getElementById("front-page").style.display = "none";
+            myVar = setTimeout(alert("Login Success"), 1000);
+
+            myVar = setTimeout(window.location = "homepage.html", 1000);
             //}
         });
 
