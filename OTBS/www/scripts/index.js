@@ -18,6 +18,7 @@
             errorPlacement: function (error, element) {
                 error.appendTo(element.parent().parent().after());
             },
+
         });
 
         $("#btnLogin").bind("click", function () {
@@ -25,7 +26,7 @@
             // login();   
             document.getElementById("loader").style.display = "block";
             document.getElementById("front-page").style.display = "none";
-            myVar = setTimeout(alert("Login Success"), 1000);
+ 
 
             myVar = setTimeout(window.location = "homepage.html", 1000);
             //}
