@@ -11,7 +11,9 @@
         $("#btnReservation").bind("click", function () {
             reservation();
         });
-
+        $("#btnprofile").bind("click", function () {
+            window.location = "profile.html";
+        });
         $("#sidebarSettingopen").bind("click", function () {
             openNav();
         });
@@ -44,6 +46,11 @@
             document.getElementById("homepage").style.display = "block";
         }
         myFunction();
+        showSlides(slideIndex);
+    showlogin();
+    showlogin();
+    shownewuser();
+    currentSlide(1);
     });
 
   

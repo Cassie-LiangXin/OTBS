@@ -1,12 +1,5 @@
-﻿<!DOCTYPE html>
-<html>
+﻿<html>
 <head>
-    <!--
-        Customize the content security policy in the meta tag below as needed. Add 'unsafe-inline' to default-src to enable inline JavaScript.
-        For details, see http://go.microsoft.com/fwlink/?LinkID=617521
-    -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: http://jacksonng.org https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
-
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
     <meta name="format-detection" content="telephone=no">
     <meta name="msapplication-tap-highlight" content="no">
@@ -18,16 +11,15 @@
     <script src="lib/jquery-1.11.2.min.js"></script>
     <script src="lib/jquery.mobile-1.4.5.min.js"></script>
     <script src="lib/jquery.validate.min.js"></script>
-    <script src="scripts/common.js"></script>
     <script src="scripts/index.js"></script>
     <script src="scripts/newuser.js"></script>
+    <script src="scripts/common.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-
-    <title>CSC</title>
+    <title>Civil Service Club</title>
 </head>
 <body>
-    <div id="loader" style="display:none;" ></div>
+    <div id="loader" style="display:none;"></div>
     <div data-role="page" id="front-page">
         <div data-role="header" class="header" data-position="fixed">
             <h1 id="title">Civil service club</h1>
@@ -35,25 +27,26 @@
         </div>
 
 
-        <!-- Slideshow container -->
+        <!-- Slideshow container Start -->
+
         <div class="slideshow-container">
 
             <!-- Full-width images with number and caption text -->
             <div class="mySlides">
                 <div class="numbertext">1 / 3</div>
-                <img src="css/images/clubhouse_cg.jpg" style="width:400px;height:300px;">
+                <img src="css/images/clubhouse_cg.jpg" style="width:400px;height:250px;">
                 <div class="text">Caption One</div>
             </div>
 
             <div class="mySlides">
                 <div class="numbertext">2 / 3</div>
-                <img src="css/images/5.png" style="width:400px;height:300px;">
+                <img src="css/images/5.png" style="width:400px;height:250px;">
                 <div class="text">Caption Two</div>
             </div>
 
             <div class="mySlides">
                 <div class="numbertext">3 / 3</div>
-                <img src="css/images/timthumb.jpg" style="width:400px;height:300px;">
+                <img src="css/images/timthumb.jpg" style="width:400px;height:250px;">
                 <div class="text">Caption Three</div>
             </div>
 
@@ -62,7 +55,6 @@
             <a class="next" id="plusSlides">&#10095;</a>
         </div>
         <br>
-
         <!-- The dots/circles -->
         <div style="text-align:center">
             <span class="dot" id="Slides1"></span>
@@ -70,10 +62,13 @@
             <span class="dot" id="Slides3"></span>
         </div>
 
+        <!--Slideshow container End-->
+        <!-- Login Form Start -->
         <div id="showloginform">
 
             <div data-role="content" class="ui-content" id="loginsection">
                 <form name="LoginForm" id="LoginForm">
+
                     <div data-role="fieldcontainer">
                         <label for="userid">User ID</label>
                         <input type="text" name="txtLogin" id="txtLogin" placeholder="enter user ID" value="jimmy" required>
@@ -96,56 +91,57 @@
             </div>
 
         </div>
-
-
+        <!-- Login Form End -->
+        <!-- Create New User Form Start -->
         <div role="main" class="ui-content" id="shownewuserform">
             <form name="NewUserForm" id="NewUserForm">
                 <div data-role="fieldcontainer">
                     <label for="txtNewName">User ID</label>
-                    <input type="text" name="txtNewName" id="txtNewName" placeholder="enter user ID" value="peter" required>
+                    <input type="text" name="txtNewName" id="createname" placeholder="enter user ID" value="peter" required>
                 </div>
 
                 <div data-role="fieldcontainer">
                     <label for="txtNewEmail">Email</label>
-                    <input type="text" name="txtNewEmail" id="txtNewEmail" placeholder="enter email" value="peter@peter.com" required>
+                    <input type="text" name="txtNewEmail" id="createEmail" placeholder="enter email" value="peter@peter.com" required>
                 </div>
 
                 <div data-role="fieldcontainer">
                     <label for="txtNewPassword">Password</label>
-                    <input type="text" name="txtNewPassword" id="txtNewPassword" placeholder="enter password" value="peter" required>
+                    <input type="text" name="txtNewPassword" id="createPassword" placeholder="enter password" value="peter" required>
                 </div>
 
                 <div data-role="fieldcontainer">
                     <label for="txtNewPasswordAgain">Re-Enter Password</label>
-                    <input type="text" name="txtNewPasswordAgain" id="txtNewPasswordAgain" placeholder="enter password again" value="peter" required>
+                    <input type="text" name="txtNewPasswordAgain" id="createPasswordAgain" placeholder="enter password again" value="peter" required>
                 </div>
 
                 <div data-role="fieldcontainer">
                     <img id="imgNewUser" height="20">
-                    <input type="button" name="selectimg" id="btnSelectImg" value="My Picture">
+                    <input type="file" data-clear-btn="false" name="file-1" id="file-1" value="">
                 </div>
 
                 <div data-role="fieldcontainer">
                     <label for="description">About Me:</label>
-                    <textarea rows="1" name="description" id="description"></textarea>
+                    <textarea rows="1" name="description" id="createdescription"></textarea>
                 </div>
 
                 <input type="button" id="btnCreateAccount" value="Create Account">
             </form>
         </div>
-
+        <!-- Create New User Form End -->
+        <!-- navbar start -->
         <div data-role="navbar">
             <ul>
                 <li><button id="btnshowlogin">LOGIN</button></li>
                 <li><button id="btnshownewuser">NEW USER</button></li>
 
             </ul>
-        </div><!-- /navbar -->
-
+        </div>
+        <!-- navbar End -->
     </div>
-
+    <!--Do not touch -->
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="scripts/platformOverrides.js"></script>
-    <script type="text/javascript" src="scripts/index.js"></script>
+    <!--Do not touch -->
 </body>
 </html>

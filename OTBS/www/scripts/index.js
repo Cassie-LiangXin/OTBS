@@ -4,8 +4,10 @@
     var userid;
     var password;
     var myVar;
-    $(document).ready(function () {
+    var slideIndex = 1;
 
+    $(document).ready(function () {
+        // For login 
         $("#LoginForm").validate({
             messages: {
                 txtLogin: "User ID is required",
@@ -22,15 +24,23 @@
         });
 
         $("#btnLogin").bind("click", function () {
-            //if ($("#LoginForm").valid()) {
-            // login();   
+            if ($("#LoginForm").valid()) {
             document.getElementById("loader").style.display = "block";
             document.getElementById("front-page").style.display = "none";
- 
-
             myVar = setTimeout(window.location = "homepage.html", 1000);
-            //}
+            }
         });
+        // End login
+        // For Create account
+
+
+
+
+
+
+
+
+        // End create account
 
         $("#btnNewUser").bind("click", function () {
             window.location = "newuser.html";
@@ -63,53 +73,21 @@
         $("#Slides1").bind("click", function () {
             currentSlide(1);
         });
+
         $("#Slides2").bind("click", function () {
             currentSlide(2);
         });
+
         $("#Slides3").bind("click", function () {
             currentSlide(3);
         });
 
-
+        showSlides(slideIndex);
+        showlogin();
+        showlogin();
+        shownewuser();
+        currentSlide(1);
     });
-
-    function login() {
-        var url = serverURL() + "/login.php";
-        var result;
-        userid = $("#txtLogin").val();
-        password = $("#txtPassword").val();
-
-        var JSONObject = {
-            "userid": userid,
-            "password": password
-        };
-
-        $.ajax({
-            url: url,
-            type: 'GET',
-            data: JSONObject,
-            dataType: 'json',
-            contentType: "application/json; charset=utf-8",
-            success: function (arr) {
-                _getLoginResult(arr);
-            },
-            error: function () {
-                validationMsg();
-            }
-        });
-    }
-
-    function _getLoginResult(arr) {
-        if (arr[0].result.trim() !== "0") {
-            localStorage.setItem("userid", userid);
-            localStorage.setItem("password", password);
-            validationMsgs("Login OK", "Information", "OK");
-            window.location = "me.html";
-        }
-        else {
-            validationMsgs("Error in Username or Password", "Validation", "Try Again");
-        }
-    }
 
     function showlogin() {
         var showlogin = document.getElementById("showloginform");
@@ -128,10 +106,6 @@
             shownewuser.style.display = "none";
         }
     }
-
-
-    var slideIndex = 1;
-    showSlides(slideIndex);
 
     // Next/previous controls
     function plusSlides(n) {
@@ -160,13 +134,7 @@
         dots[slideIndex - 1].className += " active";
     }
 
-
     //excute on start
-    showlogin();
-    showlogin();
-    shownewuser();
-    currentSlide(1);
-
 
 
 })();

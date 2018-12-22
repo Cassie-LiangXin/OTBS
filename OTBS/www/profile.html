@@ -1,0 +1,78 @@
+﻿<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+
+    <link rel="stylesheet" type="text/css" href="css/profile.css">
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.5.css">
+
+    <script src="lib/jquery-1.11.2.min.js"></script>
+    <script src="lib/jquery.mobile-1.4.5.min.js"></script>
+    <script src="lib/jquery.validate.min.js"></script>
+    <script src="scripts/profile.js"></script>
+    <script src="scripts/common.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <title>Civil Service Club</title>
+</head>
+<body>
+    <div data-role="page" id="mainpage">
+        <div data-role="header">
+            <h1>FriendsZone</h1>
+            <a href="#" id="back" class="ui-btn ui-icon-home ui-btn-icon-left">Back</a>
+            <a href="#" id="logout" data-icon="power" class="ui-btn-right">Logout</a>
+        </div>
+        
+    
+        <div data-role="content" class="ui-content" id="profilesection">
+
+            <!-- form to make changes to profile -->
+            <form name="ProfileForm">
+
+                <label for="userid">User Name</label>
+                <input type="text" name="userid" id="userid" placeholder="enter userid" value="peter"  disabled>
+
+                <!-- myimg is a placeholder for profile images -->
+                <img src="css/website_images/desk.jpg" style="width:140px;height:80px;">
+
+                <!-- press [Change Picture] to change the profile image -->
+                <input type="image" data-clear-btn="false" name="file-1" id="file-1" value="">
+
+                <hr>
+
+                <!-- Description -->
+                <label for="description">About Me:</label>
+
+                <!-- textarea to enter new description -->
+                <textarea rows="8" name="description" id="description">
+                I think I am a nice person though have negligible weaknesses, have a good amount of likeable good qualities too. I am sincere and responsible. I am not a very intelligent student but sure I am dynamic as I am capable of managing and handling serious and difficult situations easily and finish all tasks well. I like to stay simple and uncomplicated and live joyously enjoying every moment of my life.
+                </textarea>
+
+                <!-- Press [Update About Me] to update profile -->
+                <input type="button" value="Update About Me" onclick="savedescription()">
+                <hr>
+
+                <!-- To change password, enter old password -->
+                <label for="password">Old Password</label>
+                <input type="text" name="oldpassword" id="oldpassword" placeholder="enter password" value="peter">
+
+                <!-- Enter new password -->
+                <label for="password">New Password</label>
+                <input type="text" name="newpassword" id="newpassword" placeholder="enter password" value="peter">
+
+                <!-- Re-Enter New Password -->
+                <label for="password">Re-Enter New Password</label>
+                <input type="text" name="newpasswordagain" id="newpasswordagain" placeholder="enter password again" value="Bob!23">
+
+                <!-- Press [Update Password] to update password -->
+                <input type="button" value="Update Password" onclick="savepassword()">
+
+
+            </form>
+        </div>
+
+    </div>
+</body>
+</html>
