@@ -158,6 +158,7 @@
 
     //excute on start
     showlogin();
+    showlogin();
     shownewuser();
     currentSlide(1);
 

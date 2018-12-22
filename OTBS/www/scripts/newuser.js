@@ -37,7 +37,9 @@
         });
 
         $("#btnCreateAccount").bind("click", function () {
-            savenewuser();
+            window.location = "homepage.html";
+            alert("welcome new user !");
+            //savenewuser();
         });
     }); 
 

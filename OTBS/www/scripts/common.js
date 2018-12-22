@@ -35,7 +35,15 @@ function gotocustomerprofile() { window.location = "customerprofile.html"; }
 
 function gotoreservationlist() { window.location = "viewreservation.html"; }
 
+function gotocustomersupport() { window.location = "customersupport.html"; }
 
+function gotocontactus() { window.location = "contactus.html"; }
+
+function gotofaq() { window.location = "faq.html"; }
+
+function gotofeedback() { window.location = "feedback.html"; }
+
+function gotosurvey() { window.location = "survey.html"; }
 
 function reservation() {
     window.location = "reservations.html";
