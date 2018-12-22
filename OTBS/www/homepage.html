@@ -22,13 +22,38 @@
 
 
     <title>Civil Service Club</title>
+    <style>
+    
+        body {
+            background: url("css/images/bg.png");
+            background-repeat: repeat-y;
+            background-position: center center;
+            background-attachment: scroll;
+            background-size: 100% 100%;
+        }
+
+        .ui-page {
+            background: transparent;
+        }
+
+        .ui-content {
+            background: transparent;
+        }
+        .text {
+           
+            color: white;
+            font-size: 16px;
+            padding: 16px 32px;
+        }
+</style>
 </head>
+
 
 <body >
    
-    <div data-role="page"  id="homepage" class="animate-bottom">
+    <div data-role="page"  id="homepage" class="text" >
 
-        <div data-role="header" class="header">
+        <div  >
             <a href="#" id="btnprofile" class="ui-ben ui-icon-phone ui-btn-icon-right">Profile</a>
             <h1>Civil service club</h1>
             <a class="ui-btn ui-icon-home ui-btn-icon-left" id="sidebarSettingopen">Setting</a>
@@ -46,7 +71,7 @@
         </div>
 
         <!-- Side navagation bar End -->
-        <div>
+        <div >
             <p><i>"Welcome to civil service club One membership, Three clubhouses, Four distinct experience</i></p>
             Check In Count Down progress bar :
             <progress value="22" max="100">
@@ -58,27 +83,27 @@
                     <td>
                         <button onclick="gotomakereservationpage()">
                             <img src="css/website_images/entrance.jpg" style="width:140px;height:80px;" alt="text">
-                        </button>Make Reservation
+                        </button><div class="text">Make Reservation</div>
                     </td>
                     <td>
                         <button onclick="gotoreservationlist()">
                             <img src="css/website_images/event.jpg" style="width:140px;height:80px;" alt="text">
 
-                        </button>Reservation List
-                    </td>
+                        </button><div class="text">Reservation List</div>
+</td>
 
                 </tr>
                 <tr>
                     <td>
                         <button onclick="gotocustomerprofile()">
                             <img src="css/website_images/reservation.jpg" style="width:140px;height:80px;" alt="text">
-                        </button>Customer Profile
-                    </td>
+                        </button><div class="text">Customer Profile</div>
+</td>
                     <td>
                         <button onclick="gotocustomersupport()">
                             <img src="css/website_images/desk.jpg" style="width:140px;height:80px;" alt="text">
-                        </button>Customer Support
-                    </td>
+                        </button><div class="text">Customer Support</div>
+</td>
 
                 </tr>
 
@@ -88,7 +113,7 @@
 
 
 
-        <div data-role="footer" class="footer" data-position="fixed">
+        <div data-role="footer"  data-position="fixed"  class="text">
             <div data-role="navbar">
                 <ul>
                     <li><a href="#" data-icon="info" id="btnNews">News</a></li>
