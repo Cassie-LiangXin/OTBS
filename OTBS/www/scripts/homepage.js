@@ -9,7 +9,7 @@
         });
 
         $("#btnReservation").bind("click", function () {
-            reservation();
+            gotoreservationlist();
         });
         $("#btnprofile").bind("click", function () {
             window.location = "profile.html";

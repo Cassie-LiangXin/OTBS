@@ -17,6 +17,7 @@
     <link rel="stylesheet" type="text/css" href="css/homepage.css">
     <script src="scripts/homepage.js"></script>
     <script src="scripts/common.js"></script>
+    <script src="scripts/reservation.js"></script>
     <!--End-->
 
 
@@ -24,8 +25,8 @@
 </head>
 
 <body >
-    <div id="loader"></div>
-    <div data-role="page" style="display:none;" id="homepage" class="animate-bottom">
+   
+    <div data-role="page"  id="homepage" class="animate-bottom">
 
         <div data-role="header" class="header">
             <a href="#" id="btnprofile" class="ui-ben ui-icon-phone ui-btn-icon-right">Profile</a>
@@ -47,6 +48,42 @@
         <!-- Side navagation bar End -->
         <div>
             <p><i>"Welcome to civil service club One membership, Three clubhouses, Four distinct experience</i></p>
+            Check In Count Down progress bar :
+            <progress value="22" max="100">
+            </progress>
+
+            <table id="t01">
+
+                <tr>
+                    <td>
+                        <button onclick="gotomakereservationpage()">
+                            <img src="css/website_images/entrance.jpg" style="width:140px;height:80px;" alt="text">
+                        </button>Make Reservation
+                    </td>
+                    <td>
+                        <button onclick="gotoreservationlist()">
+                            <img src="css/website_images/event.jpg" style="width:140px;height:80px;" alt="text">
+
+                        </button>Reservation List
+                    </td>
+
+                </tr>
+                <tr>
+                    <td>
+                        <button onclick="gotocustomerprofile()">
+                            <img src="css/website_images/reservation.jpg" style="width:140px;height:80px;" alt="text">
+                        </button>Customer Profile
+                    </td>
+                    <td>
+                        <button onclick="gotocustomersupport()">
+                            <img src="css/website_images/desk.jpg" style="width:140px;height:80px;" alt="text">
+                        </button>Customer Support
+                    </td>
+
+                </tr>
+
+            </table>
+
         </div>
 
 
@@ -55,7 +92,7 @@
             <div data-role="navbar">
                 <ul>
                     <li><a href="#" data-icon="info" id="btnNews">News</a></li>
-                    <li><a href="#" data-icon="search" id="btnReservation">Reservation</a></li>
+                    <li><a href="#" data-icon="search" id="btnReservation">My Reservations</a></li>
                     <li><a href="#" data-icon="star" id="btnThree">Three</a></li>
                 </ul>
             </div>

@@ -24,9 +24,10 @@
         });
 
         $("#btnLogin").bind("click", function () {
-            if ($("#LoginForm").valid()) {
+            if ($("#LoginForm").valid()) {  
+                document.getElementById("front-page").style.display = "none";
             document.getElementById("loader").style.display = "block";
-            document.getElementById("front-page").style.display = "none";
+         
             myVar = setTimeout(window.location = "homepage.html", 1000);
             }
         });
