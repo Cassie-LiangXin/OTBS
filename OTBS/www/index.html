@@ -6,6 +6,7 @@
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
 
     <link rel="stylesheet" type="text/css" href="css/index.css">
+
     <link rel="stylesheet" href="css/jquery.mobile-1.4.5.css">
 
     <script src="lib/jquery-1.11.2.min.js"></script>
@@ -17,15 +18,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <title>Civil Service Club</title>
+    <style>
+        body {
+            background: url("css/images/bg.png");
+            background-repeat: repeat-y;
+            background-position: center center;
+            background-attachment: scroll;
+            background-size: 100% 100%;
+        }
+
+        .ui-page {
+            background: transparent;
+        }
+
+        .ui-content {
+            background: transparent;
+        }
+
+        .text {
+            color: white;
+            font-size: 16px;
+        }
+    </style>
 </head>
 <body>
-    <div id="loader" style="display:none;"></div>
-    <div   id="front-page">
-        <div data-role="header" class="header" data-position="fixed">
+
+    <div class="text" id="indexpage">
+     
             <h1 id="title">Civil service club</h1>
-
-        </div>
-
+      
 
         <!-- Slideshow container Start -->
 
@@ -51,8 +72,7 @@
             </div>
 
             <!-- Next and previous buttons -->
-            <a class="prev" id="minusSlides">&#10094;</a>
-            <a class="next" id="plusSlides">&#10095;</a>
+
         </div>
         <br>
         <!-- The dots/circles -->
@@ -66,7 +86,7 @@
         <!-- Login Form Start -->
         <div id="showloginform">
 
-            <div data-role="content"  id="loginsection">
+            <div data-role="content" id="loginsection">
                 <form name="LoginForm" id="LoginForm">
 
                     <div data-role="fieldcontainer">
@@ -139,6 +159,8 @@
         </div>
         <!-- navbar End -->
     </div>
+
+
     <!--Do not touch -->
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="scripts/platformOverrides.js"></script>

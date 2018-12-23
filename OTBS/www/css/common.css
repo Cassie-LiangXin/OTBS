@@ -1,0 +1,20 @@
+﻿body {
+    background: url("css/images/bg.png");
+    background-repeat: repeat-y;
+    background-position: center center;
+    background-attachment: scroll;
+    background-size: 100% 100%;
+}
+
+.ui-page {
+    background: transparent;
+}
+
+.ui-content {
+    background: transparent;
+}
+
+.text {
+    color: white;
+    font-size: 16px;
+}

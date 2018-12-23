@@ -6,6 +6,7 @@
     var myVar;
     var slideIndex = 1;
 
+
     $(document).ready(function () {
         // For login 
         $("#LoginForm").validate({
@@ -25,10 +26,7 @@
 
         $("#btnLogin").bind("click", function () {
             if ($("#LoginForm").valid()) {  
-                document.getElementById("front-page").style.display = "none";
-            document.getElementById("loader").style.display = "block";
-         
-            myVar = setTimeout(window.location = "homepage.html", 1000);
+    window.location = "homepage.html";
             }
         });
         // End login
@@ -88,7 +86,10 @@
         showlogin();
         shownewuser();
         currentSlide(1);
+
     });
+
+
 
     function showlogin() {
         var showlogin = document.getElementById("showloginform");
