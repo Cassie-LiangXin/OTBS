@@ -53,7 +53,7 @@
            
             <a class="ui-icon-bars ui-btn-icon-top" id="sidebarSettingopen" style="width:5%;"></a>
             <h1>Civil service club</h1>
-            <a class="ui-btn ui-icon-user ui-btn-icon-left" id="btnprofile">Profile</a>
+            <a class="ui-btn ui-icon-user ui-btn-icon-left" id="btnreservelist">Profile</a>
         </div>
 
         <!-- Side navagation bar Start -->
@@ -68,8 +68,7 @@
 
         <!-- Side navagation bar End -->
         <div >
-            <p><i>"Welcome to civil service club One membership, Three clubhouses, Four distinct experience</i></p>
-            Check In Count Down progress bar :
+       Check In Count Down progress bar :
             <progress value="22" max="100">
             </progress>
 
@@ -77,28 +76,28 @@
 
                 <tr>
                     <td>
-                        <button onclick="gotomakereservationpage()">
+                        <button id="option1" onclick="gotomakereservationpage()">
                             <img src="css/website_images/entrance.jpg" style="width:140px;height:80px;" alt="text">
-                        </button><div class="text">Make Reservation</div>
+                        </button><div  id="option1text"class="text">Make Reservation</div>
                     </td>
                     <td>
-                        <button onclick="gotoreservationlist()">
+                        <button id="option2" onclick="gotoreservationlist()">
                             <img src="css/website_images/event.jpg" style="width:140px;height:80px;" alt="text">
 
-                        </button><div class="text">Reservation List</div>
+                        </button><div id="option2text" class="text">Reservation List</div>
 </td>
 
                 </tr>
                 <tr>
                     <td>
-                        <button onclick="gotocustomerprofile()">
+                        <button  id="option3"  onclick="gotocustomerprofile()">
                             <img src="css/website_images/reservation.jpg" style="width:140px;height:80px;" alt="text">
-                        </button><div class="text">Customer Profile</div>
+                        </button><div id="option3text" class="text">Customer Profile</div>
 </td>
                     <td>
-                        <button onclick="gotocustomersupport()">
+                        <button  id="option4"  onclick="gotocustomersupport()">
                             <img src="css/website_images/desk.jpg" style="width:140px;height:80px;" alt="text">
-                        </button><div class="text">Customer Support</div>
+                        </button><div id="option4text"class="text">Customer Support</div>
 </td>
 
                 </tr>

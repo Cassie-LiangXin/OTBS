@@ -3,6 +3,7 @@
 
     var userid;
     var password;
+    var checkinsatus;
     var myVar;
     var slideIndex = 1;
 
@@ -25,8 +26,16 @@
         });
 
         $("#btnLogin").bind("click", function () {
-            if ($("#LoginForm").valid()) {  
-    window.location = "homepage.html";
+            if ($("#LoginForm").valid()) {
+                userid = $("#createname").val();
+                password = $("#txtPassword").val();
+                checkinsatus = getRadioValue("checkinstatus");
+             
+                localStorage.setItem("userid", userid);
+                localStorage.setItem("password", password);
+                localStorage.setItem("checkinsatus", checkinsatus);
+                window.location = "homepage.html";
+                alert(checkinsatus);
             }
         });
         // End login

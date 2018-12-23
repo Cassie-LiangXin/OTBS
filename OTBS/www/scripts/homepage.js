@@ -1,8 +1,18 @@
 ﻿(function () {
     "use strict";
-
-   
+    var userid= localStorage.getItem("userid");
+    var password=localStorage.getItem("password");
+    var checkinsatus=localStorage.getItem("checkinsatus");
     $(document).ready(function () {
+
+
+
+        if (checkinsatus === "notcheckedin") {
+            document.getElementById("option4").style.display = "none";
+            document.getElementById("option4text").style.display = "none";
+        }
+
+
 
         $("#btnNews").bind("click", function () {
             window.location = "news.html";
@@ -11,8 +21,8 @@
         $("#btnReservation").bind("click", function () {
             gotoreservationlist();
         });
-        $("#btnprofile").bind("click", function () {
-            window.location = "profile.html";
+        $("#btnreservelist").bind("click", function () {
+            window.location = "viewreservation.html";
         });
         $("#sidebarSettingopen").bind("click", function () {
             openNav();
@@ -20,6 +30,8 @@
 
         $("#sidebarSettingclose").bind("click", function () {
             closeNav();
+    
+
         });
 
         /* Set the width of the side navigation to 250px and the left margin of the page content to 250px */
