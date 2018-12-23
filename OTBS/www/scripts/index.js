@@ -35,7 +35,7 @@
                 localStorage.setItem("password", password);
                 localStorage.setItem("checkinsatus", checkinsatus);
                 window.location = "homepage.html";
-                alert(checkinsatus);
+              // alert(checkinsatus);
             }
         });
         // End login
