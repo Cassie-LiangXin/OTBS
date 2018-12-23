@@ -22,10 +22,33 @@
     <script src="scripts/index.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+        body {
+            background: url("css/images/bg.png");
+            background-repeat: repeat-y;
+            background-position: center center;
+            background-attachment: scroll;
+            background-size: 100% 100%;
+        }
+
+        .ui-page {
+            background: transparent;
+        }
+
+        .ui-content {
+            background: transparent;
+        }
+
+        .text {
+            color: white;
+            font-size: 16px;
+        }
+    </style>
+
     <title>Civil Service Club</title>
 </head>
 <body>
-    <div class="app">
+    <div class="text">
         <div data-role="main" class="ui-content">
             <form name="wageform" id="wageform">
                 <div class="ui-field-contain">
@@ -36,32 +59,32 @@
                 </div>
             </form>
 
-  
-                <table id="t02">
 
-                    <tr>
-                        <td>
-                            <button value="FACILITIES" > <img width="140" height="80" id="btnFacilities" src="css/website_images/cordova.png" /></button>Facilities
-                        </td>
-                        <td>
-                            <button><img width="140" height="80" id="btnFoodDelivery" src="css/website_images/cordova.png" /></button>FoodDelivery
-                        </td>
+            <table id="t02">
 
-                    </tr>
-                    <tr>
-                        <td>
+                <tr>
+                    <td>
+                        <button value="FACILITIES"> <img width="140" height="80" id="btnFacilities" src="css/website_images/cordova.png" /></button>Facilities
+                    </td>
+                    <td>
+                        <button><img width="140" height="80" id="btnFoodDelivery" src="css/website_images/cordova.png" /></button>FoodDelivery
+                    </td>
 
-                            <button value="HOUESEKEEPING"> <img width="140" height="80" id="btnHouseKeeping" src="css/website_images/cordova.png" /></button>HouseKeeping
-                        </td>
-                        <td></td>
+                </tr>
+                <tr>
+                    <td>
 
-                    </tr>
-                </table>
-         
+                        <button value="HOUESEKEEPING"> <img width="140" height="80" id="btnHouseKeeping" src="css/website_images/cordova.png" /></button>HouseKeeping
+                    </td>
+                    <td></td>
 
-            </div>
+                </tr>
+            </table>
+
+
         </div>
-  
+    </div>
+
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="scripts/platformOverrides.js"></script>
     <script type="text/javascript" src="scripts/makereservation.js"></script>

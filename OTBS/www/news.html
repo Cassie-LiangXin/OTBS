@@ -1,31 +1,53 @@
 ﻿<!DOCTYPE html>
 <html>
-    <head>
+<head>
     <!--
         Customize the content security policy in the meta tag below as needed. Add 'unsafe-inline' to default-src to enable inline JavaScript.
         For details, see http://go.microsoft.com/fwlink/?LinkID=617521
     -->
-        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: http://jacksonng.org https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
-        
-        <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-        <meta name="format-detection" content="telephone=no">
-        <meta name="msapplication-tap-highlight" content="no">
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: http://jacksonng.org https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
 
-        <link rel="stylesheet" type="text/css" href="css/news.css">
-        <link rel="stylesheet" href="css/jquery.mobile-1.4.5.css">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
 
-        <script src="lib/jquery-1.11.2.min.js"></script>
-        <script src="lib/jquery.mobile-1.4.5.min.js"></script>
-        <script src="lib/jquery.validate.min.js"></script>
-        <script src="scripts/common.js"></script>
-        <script src="scripts/news.js"></script>
-        
+    <link rel="stylesheet" type="text/css" href="css/news.css">
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.5.css">
 
-        <title>CSC</title>
-    </head>
+    <script src="lib/jquery-1.11.2.min.js"></script>
+    <script src="lib/jquery.mobile-1.4.5.min.js"></script>
+    <script src="lib/jquery.validate.min.js"></script>
+    <script src="scripts/common.js"></script>
+    <script src="scripts/news.js"></script>
+
+    <style>
+        body {
+            background: url("css/images/bg.png");
+            background-repeat: repeat-y;
+            background-position: center center;
+            background-attachment: scroll;
+            background-size: 100% 100%;
+        }
+
+        .ui-page {
+            background: transparent;
+        }
+
+        .ui-content {
+            background: transparent;
+        }
+
+        .text {
+            color: white;
+            font-size: 16px;
+        }
+    </style>
+
+    <title>CSC</title>
+</head>
     <body >
-        <div data-role="page" id="front-page">
+        <div data-role="page" id="front-page"  class="text">
             <div data-role="header" class="header" data-position="fixed">
                 <h1 id="title">news</h1>
 

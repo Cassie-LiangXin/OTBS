@@ -19,49 +19,71 @@
     <script src="lib/jquery.validate.min.js"></script>
     <script src="scripts/common.js"></script>
     <script src="scripts/housekeeping.js"></script>
+    <style>
+        body {
+            background: url("css/images/bg.png");
+            background-repeat: repeat-y;
+            background-position: center center;
+            background-attachment: scroll;
+            background-size: 100% 100%;
+        }
+
+        .ui-page {
+            background: transparent;
+        }
+
+        .ui-content {
+            background: transparent;
+        }
+
+        .text {
+            color: white;
+            font-size: 16px;
+        }
+    </style>
 
     <title>Civil Service Club</title>
 </head>
 
 <body>
+    <div class="text">
+        <table>
+            <tr>
+                <th>Common Service</th>
+                <th>Quantity</th>
+                <th>Add</th>
+                <th>Delete</th>
+            </tr>
 
-    <table>
-        <tr>
-            <th>Common Service</th>
-            <th>Quantity</th>
-            <th>Add</th>
-            <th>Delete</th>
-        </tr>
+            <tr>
+                <td>Bath Towels</td>
+                <td></td>
+                <td><button class="w3-button w3-circle w3-black">+</button></td>
+                <td><button class="w3-button w3-circle w3-teal">-</button></td>
+            </tr>
+            <tr>
+                <td>Hand Towels</td>
+                <td></td>
+                <td><button class="w3-button w3-circle w3-black">+</button></td>
+                <td><button class="w3-button w3-circle w3-teal">-</button></td>
+            </tr>
+            <tr>
+                <td>Face Towels</td>
+                <td></td>
+                <td><button class="w3-button w3-circle w3-black">+</button></td>
+                <td><button class="w3-button w3-circle w3-teal">-</button></td>
+            </tr>
+            <tr>
+                <td>Amenity</td>
+                <td></td>
+                <td><button class="w3-button w3-circle w3-black">+</button></td>
+                <td><button class="w3-button w3-circle w3-teal">-</button></td>
+            </tr>
+        </table>
+</div>
 
-        <tr>
-            <td>Bath Towels</td>
-            <td></td>
-            <td><button class="w3-button w3-circle w3-black">+</button></td>
-            <td><button class="w3-button w3-circle w3-teal">-</button></td>
-        </tr>
-        <tr>
-            <td>Hand Towels</td>
-            <td></td>
-            <td><button class="w3-button w3-circle w3-black">+</button></td>
-            <td><button class="w3-button w3-circle w3-teal">-</button></td>
-        </tr>
-        <tr>
-            <td>Face Towels</td>
-            <td></td>
-            <td><button class="w3-button w3-circle w3-black">+</button></td>
-            <td><button class="w3-button w3-circle w3-teal">-</button></td>
-        </tr>
-        <tr>
-            <td>Amenity</td>
-            <td></td>
-            <td><button class="w3-button w3-circle w3-black">+</button></td>
-            <td><button class="w3-button w3-circle w3-teal">-</button></td>
-        </tr>
-    </table>
-
-
-    <script type="text/javascript" src="cordova.js"></script>
-    <script type="text/javascript" src="scripts/platformOverrides.js"></script>
-    <script type="text/javascript" src="scripts/housekeeping.js"></script>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="scripts/platformOverrides.js"></script>
+        <script type="text/javascript" src="scripts/housekeeping.js"></script>
 </body>
 </html>

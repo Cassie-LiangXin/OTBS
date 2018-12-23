@@ -24,68 +24,90 @@
             overflow: hidden;
             background-color: #f1f1f1;
         }
+
+        body {
+            background: url("css/images/bg.png");
+            background-repeat: repeat-y;
+            background-position: center center;
+            background-attachment: scroll;
+            background-size: 100% 100%;
+        }
+
+        .ui-page {
+            background: transparent;
+        }
+
+        .ui-content {
+            background: transparent;
+        }
+
+        .text {
+            color: white;
+            font-size: 16px;
+        }
     </style>
     <title>FAQ</title>
 </head>
 <body>
-    <H1> FAQ </H1>
-    <div>
-        Here are some frequently asked questions. Hope the answers to these questions can help you with your enquiries!<p>
+    <div class="text">
+        <H1> FAQ </H1>
+        <div>
+            Here are some frequently asked questions. Hope the answers to these questions can help you with your enquiries!<p>
+        </div>
+
+        <button class="collapsible">How to book a room/facility/e-Service?</button>
+        <div class="content">
+            <p>Booking can be done via the <a href="https://www.csc.sg/" id="CSCWEBSITE">https://www.csc.sg/</a> website or the Civil Service Cob mobile application.</p>
+        </div>
+
+        <button class="collapsible">Can I cancel or make changes my reservation? Are there any additional charges?</button>
+        <div class="content">
+            <p>Yes.There will be additional charges, according to closeness to the reservation date.</p>
+        </div>
+
+        <button class="collapsible">Is there refunds for cancellation of confirmed bookings?</button>
+        <div class="content">
+            <p>No, there will be no refunds.</p>
+        </div>
+
+
+        <button class="collapsible">What is the age requirement for booking the chalets?</button>
+        <div class="content">
+            <p>18 years old and above.</p>
+        </div>
+
+        <button class="collapsible">Is there a fee chargable if I lose or damage the room key card?</button>
+        <div class="content">
+            <p>Yes.</p>
+        </div>
+
+        <button class="collapsible">Are pets allowed in the chalets?</button>
+        <div class="content">
+            <p>Only for dog-friendly chalets at Loyang.</p>
+        </div>
+
+        <button class="collapsible">Are memberships transeferable?</button>
+        <div class="content">
+            <p>No, they are not transferable.They must be returned to Membership Department upon termination of membership.</p>
+        </div>
+
+        <script>
+            var coll = document.getElementsByClassName("collapsible");
+            var i;
+
+            for (i = 0; i < coll.length; i++) {
+                coll[i].addEventListener("click", function () {
+                    this.classList.toggle("active");
+                    var content = this.nextElementSibling;
+                    if (content.style.display === "block") {
+                        content.style.display = "none";
+                    }
+                    else {
+                        content.style.display = "block";
+                    }
+                });
+            }
+        </script>
     </div>
-
-    <button class="collapsible">How to book a room/facility/e-Service?</button>
-    <div class="content">
-        <p>Booking can be done via the <a href="https://www.csc.sg/" id="CSCWEBSITE">https://www.csc.sg/</a> website or the Civil Service Cob mobile application.</p>
-    </div>
-
-    <button class="collapsible">Can I cancel or make changes my reservation? Are there any additional charges?</button>
-    <div class="content">
-        <p>Yes.There will be additional charges, according to closeness to the reservation date.</p>
-    </div>
-
-    <button class="collapsible">Is there refunds for cancellation of confirmed bookings?</button>
-    <div class="content">
-        <p>No, there will be no refunds.</p>
-    </div>
-
-
-    <button class="collapsible">What is the age requirement for booking the chalets?</button>
-    <div class="content">
-        <p>18 years old and above.</p>
-    </div>
-
-    <button class="collapsible">Is there a fee chargable if I lose or damage the room key card?</button>
-    <div class="content">
-        <p>Yes.</p>
-    </div>
-
-    <button class="collapsible">Are pets allowed in the chalets?</button>
-    <div class="content">
-        <p>Only for dog-friendly chalets at Loyang.</p>
-    </div>
-
-    <button class="collapsible">Are memberships transeferable?</button>
-    <div class="content">
-        <p>No, they are not transferable.They must be returned to Membership Department upon termination of membership.</p>
-    </div>
-
-    <script>
-        var coll = document.getElementsByClassName("collapsible");
-        var i;
-
-        for (i = 0; i < coll.length; i++) {
-            coll[i].addEventListener("click", function () {
-                this.classList.toggle("active");
-                var content = this.nextElementSibling;
-                if (content.style.display === "block") {
-                    content.style.display = "none";
-                }
-                else {
-                    content.style.display = "block";
-                }
-            });
-        }
-    </script>
-
 </body>
 </html>

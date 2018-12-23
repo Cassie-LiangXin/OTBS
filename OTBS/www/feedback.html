@@ -16,57 +16,80 @@
     <link rel="stylesheet" href="css/jquery.mobile-1.4.5.css">
     <script src="lib/jquery-1.11.2.min.js"></script>
     <script src="lib/jquery.mobile-1.4.5.min.js"></script>
+    <style>
+        body {
+            background: url("css/images/bg.png");
+            background-repeat: repeat-y;
+            background-position: center center;
+            background-attachment: scroll;
+            background-size: 100% 100%;
+        }
+
+        .ui-page {
+            background: transparent;
+        }
+
+        .ui-content {
+            background: transparent;
+        }
+
+        .text {
+            color: white;
+            font-size: 16px;
+        }
+    </style>
 
     <title>OTBSProject</title>
 </head>
-    <body>
-        <div>
-            <h1>Feedback To Us</h1>
+<body>
+    <div class="text">
+    <div>
+        <h1>Feedback To Us</h1>
 
-            <form>
-                <br /><label for="text-1">Name:</label>
-                <input type="text" name="text-1" id="text-1" value="">
-            </form>
+        <form>
+            <br /><label for="text-1">Name:</label>
+            <input type="text" name="text-1" id="text-1" value="">
+        </form>
 
-            <form>
-                <br /><label for="email-1">Email: </label>
-                <input type="email" data-clear-btn="false" name="email-1" id="email-1" value="">
-            </form>
+        <form>
+            <br /><label for="email-1">Email: </label>
+            <input type="email" data-clear-btn="false" name="email-1" id="email-1" value="">
+        </form>
 
-            <form>
-                <br /><label for="Date and time of event:">Date and time of event:</label>
-                <input type="datetime-local" data-clear-btn="false" name="datetime-1" id="datetime-1" value="">
-            </form>
+        <form>
+            <br /><label for="Date and time of event:">Date and time of event:</label>
+            <input type="datetime-local" data-clear-btn="false" name="datetime-1" id="datetime-1" value="">
+        </form>
 
-            <br /><label for="text-1">Location:</label>
-            <form class="ui-grid-b">
-                <div class="ui-block-a">
-                    <label for="grid-select-1" class="ui-hidden-accessible">Select</label>
-                    <select id="grid-select-1" name="grid-select-1" data-shadow="false">
-                        <option>Select</option>
-                        <option value="1">Bukit Batok</option>
-                        <option value="2">Changi</option>
-                        <option value="3">Loyang</option>
-                        <option value="4">Tessensohn</option>
-                    </select>
-                </div>
-            </form>
-            <form>
-                <br /><label for="file-1">Pictures(optional): </label>
-                <input type="file" data-clear-btn="false" name="file-1" id="file-1" value="">
-            </form>
-            <form>
-                <br /><label for="textarea-6">Comments:</label>
-                <textarea cols="40" rows="8" name="textarea-6" id="textarea-6" placeholder="Tell us the problem you faced?"></textarea>
-            </form>
-        </div>
+        <br /><label for="text-1">Location:</label>
+        <form class="ui-grid-b">
+            <div class="ui-block-a">
+                <label for="grid-select-1" class="ui-hidden-accessible">Select</label>
+                <select id="grid-select-1" name="grid-select-1" data-shadow="false">
+                    <option>Select</option>
+                    <option value="1">Bukit Batok</option>
+                    <option value="2">Changi</option>
+                    <option value="3">Loyang</option>
+                    <option value="4">Tessensohn</option>
+                </select>
+            </div>
+        </form>
+        <form>
+            <br /><label for="file-1">Pictures(optional): </label>
+            <input type="file" data-clear-btn="false" name="file-1" id="file-1" value="">
+        </form>
+        <form>
+            <br /><label for="textarea-6">Comments:</label>
+            <textarea cols="40" rows="8" name="textarea-6" id="textarea-6" placeholder="Tell us the problem you faced?"></textarea>
+        </form>
+    </div>
 
-        <div data-role="main" class="ui-content">
+    <div data-role="main" class="ui-content">
         <input type="button" id="btnClickMe" value="submit">
-        </div>
-
-        <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="scripts/platformOverrides.js"></script>
-        <script type="text/javascript" src="scripts/index.js"></script>
-    </body>
+    </div>
+    </div>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="scripts/platformOverrides.js"></script>
+    <script type="text/javascript" src="scripts/index.js"></script>
+</body>
 </html>

@@ -15,10 +15,33 @@
     <script src="scripts/common.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+        body {
+            background: url("css/images/bg.png");
+            background-repeat: repeat-y;
+            background-position: center center;
+            background-attachment: scroll;
+            background-size: 100% 100%;
+        }
+
+        .ui-page {
+            background: transparent;
+        }
+
+        .ui-content {
+            background: transparent;
+        }
+
+        .text {
+            color: white;
+            font-size: 16px;
+        }
+    </style>
+
     <title>Civil Service Club</title>
 </head>
 <body>
-    <div data-role="page" id="mainpage">
+    <div data-role="page" id="mainpage" class="text">
         <div data-role="header">
             <h1>FriendsZone</h1>
             <a href="#" id="back" class="ui-btn ui-icon-home ui-btn-icon-left">Back</a>
