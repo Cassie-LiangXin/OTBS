@@ -5,20 +5,18 @@
         For details, see http://go.microsoft.com/fwlink/?LinkID=617521
     -->
     <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: http://jacksonng.org https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
-
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
     <meta name="format-detection" content="telephone=no">
     <meta name="msapplication-tap-highlight" content="no">
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
-
     <link rel="stylesheet" type="text/css" href="css/housekeeping.css">
     <link rel="stylesheet" href="css/jquery.mobile-1.4.5.css">
-
     <script src="lib/jquery-1.11.2.min.js"></script>
     <script src="lib/jquery.mobile-1.4.5.min.js"></script>
     <script src="lib/jquery.validate.min.js"></script>
     <script src="scripts/common.js"></script>
     <script src="scripts/housekeeping.js"></script>
+   
     <style>
         body {
             background: url("css/images/bg.png");
@@ -40,13 +38,19 @@
             color: white;
             font-size: 16px;
         }
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+        }
     </style>
 
     <title>Civil Service Club</title>
 </head>
 
 <body>
-    <div class="text">
+    <div data-role="page" class="text">
         <table>
             <tr>
                 <th>Common Service</th>
@@ -56,39 +60,48 @@
             </tr>
             <tr>
                 <td>Bed</td>
-                <td></td>
+                <td> <input type="number" id="bedvalue" value=1 disabled></td>
                 <td><button id="addbed" class="w3-button w3-circle w3-black">+</button></td>
-                <td><button  id="removebed" class="w3-button w3-circle w3-teal">-</button></td>
+                <td><button id="removebed" class="w3-button w3-circle w3-teal">-</button></td>
             </tr>
             <tr>
                 <td>Bath Towels</td>
-                <td></td>
-                <td><button class="w3-button w3-circle w3-black">+</button></td>
-                <td><button class="w3-button w3-circle w3-teal">-</button></td>
-            </tr>
-            <tr>
-                <td>Hand Towels</td>
-                <td></td>
-                <td><button class="w3-button w3-circle w3-black">+</button></td>
-                <td><button class="w3-button w3-circle w3-teal">-</button></td>
+                <td> <input type="number" id="towelvalue" value=1 disabled></td>
+                <td><button id="addtowel" class="w3-button w3-circle w3-black">+</button></td>
+                <td><button id="removetowel" class="w3-button w3-circle w3-teal">-</button></td>
             </tr>
             <tr>
                 <td>Sofa</td>
-                <td></td>
-                <td><button class="w3-button w3-circle w3-black">+</button></td>
-                <td><button class="w3-button w3-circle w3-teal">-</button></td>
+                <td> <input type="number" id="sofavalue" value=1 disabled></td>
+                <td><button id="addsofa" class="w3-button w3-circle w3-black">+</button></td>
+                <td><button id="removesofa" class="w3-button w3-circle w3-teal">-</button></td>
             </tr>
             <tr>
-                <td>Amenity</td>
-                <td></td>
-                <td><button class="w3-button w3-circle w3-black">+</button></td>
-                <td><button class="w3-button w3-circle w3-teal">-</button></td>
+                <td>Amenity(set)</td>
+                <td> <input type="number" id="amenityvalue" value=1 disabled></td>
+                <td><button id="addamenity" class="w3-button w3-circle w3-black">+</button></td>
+                <td><button id="removeamenity" class="w3-button w3-circle w3-teal">-</button></td>
             </tr>
         </table>
-</div>
 
-        <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="scripts/platformOverrides.js"></script>
-        <script type="text/javascript" src="scripts/housekeeping.js"></script>
+        <a href="#housekeepingialog" role="button" class="ui-shadow ui-btn ui-corner-all ui-btn-inline" data-transition="flip">Submit</a>
+
+    </div>
+
+    <div data-role="page" data-dialog="true" id="housekeepingialog">
+        <div data-role="header" class="ui-content">
+            <h1>Order Sent</h1>
+    
+            <div> <img class="center" src="css/images/qrcode.jpg"></div>
+        </div>
+        <div data-role="footer">
+            <a href="viewreservation.html" class="ui-btn ui-shadow ui-corner-all ui-btn-left">Book It</a>
+            <a href="facilities.html" data-rel="back" class="ui-btn ui-shadow ui-corner-all ui-btn-right">Cancel</a>
+        </div>
+    </div>
+    
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="scripts/platformOverrides.js"></script>
+    <script type="text/javascript" src="scripts/housekeeping.js"></script>
 </body>
 </html>
