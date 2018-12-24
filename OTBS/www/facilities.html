@@ -40,6 +40,12 @@
             color: white;
             font-size: 16px;
         }
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+        }
     </style>
 
     <title>Civil Service Club</title>
@@ -73,32 +79,75 @@
                         <option value="aft1">2pm - 4pm</option>
                         <option value="aft2">4pm - 6pm</option>
                         <option value="aft3">6pm - 9pm</option>
-            
+
 
                     </select>
                 </fieldset>
-               
+
 
                 <div data-role="fieldcontainer">
                     <label for="userid">Phone Number</label>
-                    <input type="text" name="txtNric" id="txtPN" placeholder="please enter phone number" required>
+                    <input type="text" name="txtNric" id="txtPN" placeholder="please enter phone number" value="88776655" required>
                 </div>
 
                 <div data-role="fieldcontainer">
                     <label for="userid">Date</label>
-                    <input type="date" name="txtdate" id="txtdate" required>
+                    <input type="date" name="txtdate" id="txtdate" value="12-12-2018" required>
                 </div>
 
 
                 <div data-role="fieldcontainer">
-                    <label for="password">No. of people</label>
-                    <input type="number" name="txtNop" id="txtNop" placeholder="please enter No. of people" required>
+                    <label for="txtNop">No. of people</label>
+                    <input type="number" name="txtNop" id="txtNop" placeholder="please enter No. of people" value="5" required>
                 </div>
-                <input type="button" data-inline="true" id="btnmakefacilityreservation" value="submit">
+
+            
+                <a href="#lovedialog" role="button" id="facilitydialoglink"  class="ui-shadow ui-btn ui-corner-all ui-btn-inline" data-transition="flip">Submit</a>
+
             </form>
         </div>
     </div>
+
+
+
+
+    <div data-role="page" data-dialog="true" id="lovedialog">
+        <div data-role="header" class="ui-content">
+            <h1>Booking detail</h1>
+            <table data-role="table" data-mode="column" class="ui-responsive" id="myTable">
+                <thead>
+                    <tr>
+                        <th>Facility Name</th>
+                        <th>Time</th>
+                        <th>Phone Number</th>
+                        <th>Date</th>
+                        <th>No. of people</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Barbeque Station</td>
+                        <td>10am - 12pm</td>
+                        <td>82996655</td>
+                        <td>31DEC2018</td>
+                        <td>5</td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+            <div> <img class="center" src="css/images/qrcode.jpg"></div>
+
+        </div>
+        <div data-role="footer">
             
+            <a href="viewreservation.html" class="ui-btn ui-shadow ui-corner-all ui-btn-left">Book It</a>
+            <a href="facilities.html" data-rel="back" class="ui-btn ui-shadow ui-corner-all ui-btn-right">Cancel</a>
+
+        </div>
+    </div>
+
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="scripts/platformOverrides.js"></script>
     <script type="text/javascript" src="scripts/facilities.js"></script>
