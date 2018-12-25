@@ -29,7 +29,7 @@
             if ($("#LoginForm").valid()) {
                 userid = $("#createname").val();
                 password = $("#txtPassword").val();
-                checkinsatus = getRadioValue("checkinstatus");
+                checkinsatus = $("#checkinstatus").val();
              
                 localStorage.setItem("userid", userid);
                 localStorage.setItem("password", password);

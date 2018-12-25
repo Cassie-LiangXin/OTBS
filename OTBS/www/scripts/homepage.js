@@ -13,6 +13,9 @@
         }
 
 
+        $("#btnlogout").bind("click", function () {
+            window.location = "index.html";
+        });
 
         $("#btnNews").bind("click", function () {
             window.location = "news.html";

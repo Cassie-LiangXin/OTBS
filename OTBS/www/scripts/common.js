@@ -45,6 +45,7 @@ function gotofeedback() { window.location = "feedback.html"; }
 
 function gotosurvey() { window.location = "customersurvey.html"; }
 
+
 function reservation() {
     window.location = "reservations.html";
 }

@@ -41,56 +41,102 @@
             color: white;
             font-size: 16px;
         }
+        th {
+            border-bottom: 5px solid grey;
+        }
+
+        tr {
+            border: 5px solid grey;
+         
+        }
     </style>
 
 
     <title>CSC</title>
 </head>
-    <body >
-        <div data-role="page" id="front-page" class="text">
-            <div data-role="header" class="header" data-position="fixed">
-                <h1 id="title">reservation list</h1>
+<body>
+    <div data-role="header">
+        <button id="btnhomepage" class="ui-btn">Back</button> <h1 id="title">reservation list</h1>
 
-                <!-- Buttons to choose list or grid view -->
+    </div>
+
+    <div  id="front-page" class="text">
+
+        <div data-position="fixed">
+
+            <!-- Buttons to choose list or grid view -->
+            <form name="wageform" id="wageform">
+                <div>
+                    <label for="search">Search:</label>
+                    <input type="search" name="search" id="search" placeholder="Search for content...">
+
+                </div>
+            </form>   <center> <button data-inline="true">Submit</button></center>
+
+            <table data-role="table" data-mode="column" class="ui-responsive" id="myTable">
+                <thead>
+                    <tr>
+                        <th>Booking Name</th>
+                        <th>Time</th>
+                        <th>Date</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Barbeque Station</td>
+                        <td>10am-12pm</td>
+                        <td>31DEC2018</td>
+                        <td>  <a id="btnbookingdetail" role="button"  class="ui-shadow ui-btn ui-corner-all ui-btn-inline" data-transition="flip">view</a></td>
+                    </tr>
+                    <tr>
+                        <td>Dog Friendly chalets</td>
+                        <td>12pm-2pm</td>
+                        <td>29DEC2018</td>
+                        <td> <a id="btnbookingdetail2" role="button" class="ui-shadow ui-btn ui-corner-all ui-btn-inline" data-transition="flip">view</a></td>
+                    </tr>
+                </tbody>
+
+            </table>
+            <br />
+            <table data-role="table" data-mode="column" class="ui-responsive" id="myTable">
+                <thead>
+                    <tr>
+                        <th>Order</th>
+                        <th>status</th>
+                        <th> Delevier progress</th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>ExtraBed</td>
+                        <td>Delivered</td>
+                        <td>
+                            <progress value="5" max="5">
+                            </progress>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Extra Towel</td>
+                        <td>In Progress</td>
+                        <td>
+                            <progress value="3" max="5">
+                            </progress>
+                        </td>
+                    </tr>
+                </tbody>
+
+            </table>
 
 
-                <table data-role="table" data-mode="column" class="ui-responsive" id="myTable">
-                    <thead>
-                        <tr>
-                            <th>Booking Name</th>
-                            <th>Phone Number</th>
-                            <th>Date</th>
-
-                            <th></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Barbeque Station</td>
-                            <td>82996655</td>
-                            <td>31DEC2018</td>
-                  
-                            <td>  <a href="cancelreservation.html" role="button" id="canceldialoglink" class="ui-shadow ui-btn ui-corner-all ui-btn-inline" data-transition="flip">Cancel</a></td>
-                        </tr>
-                        <tr>
-                            <td>Dog Friendly chalets</td>
-                            <td>82996655</td>
-                            <td>39DEC2018</td>
-
-                            <td></td>
-                        </tr>
-                    </tbody>
-
-                </table>
 
 
 
+        </div>
+    </div>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="scripts/platformOverrides.js"></script>
 
-
-            </div>
-            </div>
-        <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="scripts/platformOverrides.js"></script>
-        
-    </body>
+</body>
 </html> 

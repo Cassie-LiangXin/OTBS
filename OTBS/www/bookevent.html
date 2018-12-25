@@ -36,100 +36,117 @@
             font-size: 16px;
         }
 
-        .gallery {
-            border: 1px #ccc;
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
         }
-
-        .gallery:hover {
-            border: 1px  #777;
-        }
-
-            .gallery img {
-                width: 50%;
-                height: auto;
-                float: left;
-            }
-
-        .desc {
-            padding: 15px;
-            text-align: center;
-        }
-
-        * {
-            box-sizing: border-box;
-        }
-
-        .responsive {
-            padding: 0 6px;
-            float: left;
-            width: 24.99999%;
-        }
-
-        @media only screen and (max-width: 700px) {
-            .responsive {
-                width: 49.99999%;
-                margin: 6px 0;
-            }
-        }
-
-        @media only screen and (max-width: 500px) {
-            .responsive {
-                width: 100%;
-            }
-        }
-
-        .clearfix:after {
-            content: "";
-            display: table;
-            clear: both;
-        }
-   
     </style>
+
+    <title>Civil Service Club</title>
 </head>
 
 <body>
+
     <div data-role="page" class="text">
         <div data-role="header">
             <h1>Welcome</h1>
         </div>
 
-        <div data-role="main" >
-            <div class="responsive">
-                <div class="gallery">
-                    <a target="_blank" href="eventdetail.html">
-                       <p><img src="css/images/event1.JPG" alt="event1" width="300" height="300">
-                          <div class="text">Come and join us for our CNY BAZAAR 2019!</div> </p> 
-                    </a>
+        <div data-role="main" class="ui-content">
+            <form>
+                <fieldset class="ui-field-contain">
+                    <label for="items">Select Items</label>
+                    <select name="items" id="items">
+                        <option value="BBQ">Barbeque Station</option>
+                        <option value="CFA">Child friendly amentities</option>
+                        <option value="BS">Bike sharing/buggles</option>
+                        <option value="DF">Dog Friendly chalets</option>
+                        <option value="SS">Sea Sports</option>
+                    </select>
+
+
+                    <label for="times">Time</label>
+                    <select name="times" id="times">
+                        <option value="mon1">8am - 10am</option>
+                        <option value="mon2">10am - 12pm</option>
+                        <option value="mon3">12pm - 2pm</option>
+                        <option value="aft1">2pm - 4pm</option>
+                        <option value="aft2">4pm - 6pm</option>
+                        <option value="aft3">6pm - 9pm</option>
+
+
+                    </select>
+                </fieldset>
+
+
+                <div data-role="fieldcontainer">
+                    <label for="userid">Phone Number</label>
+                    <input type="text" name="txtNric" id="txtPN" placeholder="please enter phone number" value="88776655" required>
                 </div>
-            </div>
 
-
-            <div class="responsive">
-                <div class="gallery">
-                    <a target="_blank" href="eventdetail.html">
-                        <p>
-                            <img src="css/images/event2.JPG" alt="event2" width="300" height="300">
-                            <div class="text">Chinese New Year lohei dinner? Gather family, friends and business associates together to toss to good furtune.</div>
-                        </p>
-                    </a>
+                <div data-role="fieldcontainer">
+                    <label for="userid">Date</label>
+                    <input type="date" name="txtdate" id="txtdate" value="12-12-2018" required>
                 </div>
-            </div>
 
 
-
-            <div class="responsive">
-                <div class="gallery">
-                    <a target="_blank" href="eventdetail.html">
-                        <p>
-                            <img src="css/images/event4.JPG" alt="event4" width="300" height="300">
-                            <div class="text">Come enjoy a FREE movie screening in the comfort of our newly renovated auditorium.(Registration required)</div>
-                        </p>
-                    </a>
-                    
+                <div data-role="fieldcontainer">
+                    <label for="txtNop">No. of people</label>
+                    <input type="number" name="txtNop" id="txtNop" placeholder="please enter No. of people" value="5" required>
                 </div>
-            </div>
+
+
+                <a href="#lovedialog" role="button" id="facilitydialoglink" class="ui-shadow ui-btn ui-corner-all ui-btn-inline" data-transition="flip">Submit</a>
+
+            </form>
         </div>
     </div>
+
+
+
+
+    <div data-role="page" data-dialog="true" id="lovedialog">
+        <div data-role="header" class="ui-content">
+            <h1>Booking detail</h1>
+            <table data-role="table" data-mode="column" class="ui-responsive" id="myTable">
+                <thead>
+                    <tr>
+                        <th>Facility Name</th>
+                        <th>Time</th>
+                        <th>Phone Number</th>
+                        <th>Date</th>
+                        <th>No. of people</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Barbeque Station</td>
+                        <td>10am - 12pm</td>
+                        <td>82996655</td>
+                        <td>31DEC2018</td>
+                        <td>5</td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+            <div> <img class="center" src="css/images/qrcode.jpg"></div>
+
+        </div>
+        <div data-role="footer">
+
+            <a href="viewreservation.html" class="ui-btn ui-shadow ui-corner-all ui-btn-left">Book It</a>
+            <a href="facilities.html" data-rel="back" class="ui-btn ui-shadow ui-corner-all ui-btn-right">Cancel</a>
+
+        </div>
+    </div>
+
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="scripts/platformOverrides.js"></script>
+    <script type="text/javascript" src="scripts/facilities.js"></script>
 </body>
 
 

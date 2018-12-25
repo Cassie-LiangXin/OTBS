@@ -90,22 +90,21 @@
                 <form name="LoginForm" id="LoginForm">
 
                     <div data-role="fieldcontainer">
-         
+
                         <input type="text" name="txtLogin" id="txtLogin" placeholder="enter user ID" value="bob" required>
                     </div>
 
                     <div data-role="fieldcontainer">
 
-                        <input type="text" name="txtPassword" id="txtPassword" placeholder="enter password" value="bob"  required>
+                        <input type="password" name="txtPassword" id="txtPassword" placeholder="enter password" value="bob" required>
                     </div>
 
-                    <div data-role="fieldcontainer">
-                        <fieldset data-role="controlgroup">
-                            <legend>Choose your Check In Status</legend>
-                            <input  type="radio" name="checkinstatus" id="checkedin" value="checkedin" checked>CheckedIn<br /><br />
-                            <input type="radio" name="checkinstatus" id="notcheckedin" value="notcheckedin" >NotYet
-                        </fieldset>
-                    </div>
+
+                    <label for="checkinstatus">Choose your Check In Status:</label>
+                    <select name="checkinstatus" id="checkinstatus" data-role="slider" data-mini="true">
+                        <option value="notcheckedin">No</option>
+                        <option value="checkedin" selected="">Yes</option>
+                    </select>
 
                     <div class="ui-grid-a">
                         <div class="ui-block-a">

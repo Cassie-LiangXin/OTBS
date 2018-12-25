@@ -55,6 +55,8 @@
 
     <div data-role="page" class="text">
         <div data-role="header">
+            <a data-rel="back" id="back" class="ui-btn ui-icon-home ui-btn-icon-left">Back</a>
+            <a href="index.html" id="logout" data-icon="power" class="ui-btn-right">Logout</a>
             <h1>Welcome</h1>
         </div>
 
@@ -70,6 +72,16 @@
                         <option value="SS">Sea Sports</option>
                     </select>
 
+                    <label for="type"><strong>Types of Event: </strong></label>
+                    <select name="event" id="event" on">
+                        <option value="birthday">Birthday Celebration</option>
+                        <option value="newyear">NewYear Celebration</option>
+                        <option value="chrismas">Chrismas Celebration</option>
+                        <option value="gathering">Gathering</option>
+                    </select>
+                    <input type="text" name="othertext" id="othertext" placeholder="Specify others" />
+
+                    <br />
 
                     <label for="times">Time</label>
                     <select name="times" id="times">
@@ -83,7 +95,10 @@
 
                     </select>
                 </fieldset>
+      
+                
 
+         
 
                 <div data-role="fieldcontainer">
                     <label for="userid">Phone Number</label>
@@ -98,11 +113,11 @@
 
                 <div data-role="fieldcontainer">
                     <label for="txtNop">No. of people</label>
-                    <input type="number" name="txtNop" id="txtNop" placeholder="please enter No. of people" value="5" required>
+                    <input type="tel" name="txtNop" id="txtNop" placeholder="please enter No. of people" value="5" required>
                 </div>
 
-            
-                <a href="#lovedialog" role="button" id="facilitydialoglink"  class="ui-shadow ui-btn ui-corner-all ui-btn-inline" data-transition="flip">Submit</a>
+
+                <a href="#lovedialog" role="button" id="facilitydialoglink" class="ui-shadow ui-btn ui-corner-all ui-btn-inline" data-transition="flip">Submit</a>
 
             </form>
         </div>
@@ -142,8 +157,8 @@
         </div>
         <div data-role="footer">
             
-            <a href="viewreservation.html" class="ui-btn ui-shadow ui-corner-all ui-btn-left">Book It</a>
-            <a href="facilities.html" data-rel="back" class="ui-btn ui-shadow ui-corner-all ui-btn-right">Cancel</a>
+            <a id="btnviewreservation" class="ui-btn ui-shadow ui-corner-all ui-btn-left">Book It</a>
+            <a id="bthfacilities" data-rel="back" class="ui-btn ui-shadow ui-corner-all ui-btn-right">Cancel</a>
 
         </div>
     </div>

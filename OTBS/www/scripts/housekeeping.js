@@ -54,8 +54,14 @@
         });
 
 
-
-
+        $("#removeamenity").bind("click", function () {
+            amenity = amenity - 1;
+            if (amenity <= 0) { amenity = 1; }
+            document.getElementById("amenityvalue").value = amenity;
+        });
+        $("#btngolist").bind("click", function () {
+            window.location = "viewreservation.html";
+        });
 
 
     });

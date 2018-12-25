@@ -45,14 +45,15 @@
 </head>
 
 
-<body >
-   
-    <div data-role="page"  id="homepage" class="text" >
-        
-        <div  >
-           
-            <a class="ui-icon-bars ui-btn-icon-top" id="sidebarSettingopen" style="width:5%;"></a>
-            <h1>Civil service club</h1>
+<body>
+    <div data-role="header">
+        <a id="btnlogout" class="ui-btn">Logout</a><h1>Welcome</h1>
+        <a class="ui-icon-bars ui-btn-icon-right" id="sidebarSettingopen">Menu</a>
+    </div>
+
+    <div  id="homepage" class="text">
+        <div>
+            <center> <h1>Civil service club</h1></center>
             <a class="ui-btn ui-icon-user ui-btn-icon-left" id="btnreservelist">My Bookings</a>
         </div>
 
@@ -67,10 +68,7 @@
         </div>
 
         <!-- Side navagation bar End -->
-        <div >
-       Check In Count Down progress bar :
-            <progress value="22" max="100">
-            </progress>
+        <div>
 
             <table id="t01">
 
@@ -78,27 +76,27 @@
                     <td>
                         <button id="option1" onclick="gotomakereservationpage()">
                             <img src="css/website_images/entrance.jpg" style="width:140px;height:80px;" alt="text">
-                        </button><div  id="option1text"class="text">Make Reservation</div>
+                        </button><div id="option1text" class="text">Make Reservation</div>
                     </td>
                     <td>
-                        <button id="option2" onclick="gotoreservationlist()">
+                        <button id="btnNews">
                             <img src="css/website_images/event.jpg" style="width:140px;height:80px;" alt="text">
 
-                        </button><div id="option2text" class="text">Cancel Reservation</div>
-</td>
+                        </button><div id="option2text" class="text">News</div>
+                    </td>
 
                 </tr>
                 <tr>
                     <td>
-                        <button  id="option3"  onclick="gotocustomerprofile()">
+                        <button id="option3" onclick="gotocustomerprofile()">
                             <img src="css/website_images/reservation.jpg" style="width:140px;height:80px;" alt="text">
                         </button><div id="option3text" class="text">Customer Profile</div>
-</td>
+                    </td>
                     <td>
-                        <button  id="option4"  onclick="gotocustomersupport()">
+                        <button id="option4" onclick="gotocustomersupport()">
                             <img src="css/website_images/desk.jpg" style="width:140px;height:80px;" alt="text">
-                        </button><div id="option4text"class="text">Customer Support</div>
-</td>
+                        </button><div id="option4text" class="text">Customer Support</div>
+                    </td>
 
                 </tr>
 
@@ -108,15 +106,7 @@
 
 
 
-        <div data-role="footer"  data-position="fixed"  class="text">
-            <div data-role="navbar">
-                <ul>
-                    <li><a href="#" data-icon="info" id="btnNews">News</a></li>
-                    <li><a href="#" data-icon="search" id="btnReservation">My Reservations</a></li>
-                    <li><a href="#" data-icon="star" id="btnThree">Three</a></li>
-                </ul>
-            </div>
-        </div>
+
 
     </div>
 
