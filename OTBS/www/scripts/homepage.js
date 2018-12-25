@@ -21,6 +21,7 @@
         $("#btnReservation").bind("click", function () {
             gotoreservationlist();
         });
+
         $("#btnreservelist").bind("click", function () {
             window.location = "viewreservation.html";
         });

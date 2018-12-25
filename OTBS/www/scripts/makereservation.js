@@ -20,5 +20,9 @@
             window.location = "housekeeping.html";
         });
     });
+    //button 4
+    $("#btnEvent").bind("click", function () {
+        window.location = "bookevent.html";
+    });
 
 })();
