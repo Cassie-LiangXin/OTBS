@@ -1,9 +1,117 @@
-﻿<!DOCTYPE html>
-<html>
+﻿<html>
 <head>
-    <title></title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <link rel="stylesheet" type="text/css" href="css/background.css">
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.5.css">
+    <script src="lib/jquery-1.11.2.min.js"></script>
+    <script src="lib/jquery.mobile-1.4.5.min.js"></script>
+    <script src="lib/jquery.validate.min.js"></script>
+    <script src="scripts/staffcommon.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+        body {
+            background: url("css/images/bg1.jpg");
+            background-repeat: repeat-y;
+            background-position: center center;
+            background-attachment: scroll;
+            background-size: 100% 100%;
+        }
+
+        .ui-page {
+            background: transparent;
+        }
+
+        .ui-content {
+            background: transparent;
+        }
+
+        .text {
+            color: white;
+            font-size: 16px;
+        }
+
+        .boarder {
+            border: 8px inset rgba(28,110,164,0.45);
+            border-radius: 33px 40px 40px 40px;
+            background: linear-gradient(#,#de4848 )
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .imgbox {
+            display: grid;
+            height: 100%;
+        }
+
+        .center-fit {
+            max-width: 100%;
+            max-height: 100vh;
+            margin: auto;
+            border-radius: 33px 40px 40px 40px;
+            border: 8px inset rgba(28,110,164,0.45);
+        }
+    </style>
+   
+    <title>Civil Service Club</title>
 </head>
 <body>
-    <div>Content goes here.</div>
+    <a data-rel="back" id="back" class="ui-btn ui-icon-home ui-btn-icon-left">Back</a>
+    <div data-role="content">
+    <fieldset class="ui-field-contain">
+    <h1 class="text">Select Facilities</h1>
+    <select name="items" id="items">
+        <option value="BBQ">Barbeque Station</option>
+        <option value="CFA">Child friendly amentities</option>
+        <option value="BS">Bike sharing/buggles</option>
+        <option value="DF">Dog Friendly chalets</option>
+        <option value="SS">Sea Sports</option>
+    </select>
+    </fieldset>
+        <button id="btnqrscan">Scan For Entry</button>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!--
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+    <script type="text/javascript" src="lib/jquery.qrcode.js"></script>
+    <script type="text/javascript" src="lib/qrcode.js"></script>
+    <p>
+        TODO make a nice looking pure client qrcode generator
+        even allow download of the image
+    </p>
+    <center><div id="qrcodeTable"></div></center>
+   
+ 
+    <script>
+        //jQuery('#qrcode').qrcode("this plugin is great");
+        jQuery('#qrcodeTable').qrcode({
+            render: "table",
+            text: "Job ID: 001,Workprogress: Completed,Issue: None"
+        });
+    </script>
+-->
+
 </body>
 </html>

@@ -20,6 +20,9 @@
         $("#btnNews").bind("click", function () {
             window.location = "news.html";
         });
+        $("#customerlivechat").bind("click", function () {
+            window.location = "customerlivechat.html";
+        });
 
         $("#btnReservation").bind("click", function () {
             gotoreservationlist();

@@ -69,7 +69,7 @@
                 }
                 else {
                     box = $("#chat_div").chatbox({
-                        id: "CSC Support",
+                        id: "You",
                         user: { key: "value" },
                         title: "Live chat",
                         messageSent: function (id, user, msg) {
@@ -83,16 +83,16 @@
     </script>
 </head>
 <body>
-    <a data-rel="back" id="back" class="ui-btn ui-icon-home ui-btn-icon-left">Back</a>
-    <p>
+    <p><a data-rel="back" id="back" class="ui-btn ui-icon-home ui-btn-icon-left">Back</a>
        
     </p>  
     <div id="chat_div">
     </div>
     <hr /><input type="button"
        name="toggle" value="Respond" />
-    <div id="log">
-        Customer BOB said: Hi i need help! <br />
+    <div id="log"class="text">
+        You said: Hi i need help! <br />
+        Staff Jack said: Hi sir how can i assist you? <br />
     </div>
 </body>
 </html>

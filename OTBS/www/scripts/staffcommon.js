@@ -40,6 +40,18 @@
         $("#forgetpassword").bind("click", function () {
             window.location = "forgetpassword.html";
         });
+        $("#workschedule").bind("click", function () {
+            window.location = "staffjobdetail.html";
+        });
+        $("#livechat").bind("click", function () {
+            window.location = "stafflivechat.html";
+        });
+        $("#qrscan").bind("click", function () {
+            window.location = "staffqrcode.html";
+        });
+        $("#btnqrscan").bind("click", function () {
+            window.location = "https://webqr.com/";
+        });
 
     });
 
