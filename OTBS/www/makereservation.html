@@ -43,30 +43,50 @@
             color: white;
             font-size: 16px;
         }
+
+        .boarder {
+            border: 8px inset rgba(28,110,164,0.45);
+            border-radius: 33px 40px 40px 40px;
+            background: linear-gradient(#,#de4848 )
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .imgbox {
+            display: grid;
+            height: 100%;
+        }
+
+        .center-fit {
+            max-width: 100%;
+            max-height: 100vh;
+            margin: auto;
+            border-radius: 33px 40px 40px 40px;
+            border: 8px inset rgba(28,110,164,0.45);
+        }
+
     </style>
     <title>Civil Service Club</title>
 </head>
 <body>
-    <div class="text">
+    
         <div data-role="header">
             <a data-rel="back" class="ui-btn">Back</a><h1>Welcome</h1>
         </div>
-        <table id="t02">
+  
+        <div class="imgbox">
+            <br> <br> <br> <br>
+            <img class="center-fit" id="btnFacilities" src="css/images/facilitiy.jpg" />
+            <br><br><br><br>
+            <img class="center-fit" id="btnHouseKeeping" src="css/images/housekeeping.jpg" />
+            <br>
 
-            <tr>
-                <td>
-                    <button value="FACILITIES"> <img width="140" height="80" id="btnFacilities" src="css/website_images/cordova.png" /></button>Facilities
-                </td>
-                <td>
-                    <button value="HOUESEKEEPING"> <img width="140" height="80" id="btnHouseKeeping" src="css/website_images/cordova.png" /></button>HouseKeeping
-                </td>
+        </div>
 
-            </tr>
-
-        </table>
-
-
-    </div>
+  
     
 
     <script type="text/javascript" src="cordova.js"></script>
