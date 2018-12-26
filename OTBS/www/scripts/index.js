@@ -53,7 +53,9 @@
         $("#btnNewUser").bind("click", function () {
             window.location = "newuser.html";
         });
-        
+        $("#stafflogin").bind("click", function () {
+            window.location = "stafflogin.html";
+        });
          $("#forgetpassword").bind("click", function () {
             window.location = "forgetpassword.html";
         });
