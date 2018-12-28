@@ -41,7 +41,7 @@
             window.location = "forgetpassword.html";
         });
         $("#workschedule").bind("click", function () {
-            window.location = "staffjobdetail.html";
+            window.location = "staffjoblist.html";
         });
         $("#livechat").bind("click", function () {
             window.location = "stafflivechat.html";

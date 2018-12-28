@@ -1,0 +1,229 @@
+﻿<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <link rel="stylesheet" type="text/css" href="css/background.css">
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.5.css">
+    <script src="lib/jquery-1.11.2.min.js"></script>
+    <script src="lib/jquery.mobile-1.4.5.min.js"></script>
+    <script src="lib/jquery.validate.min.js"></script>
+    <script src="scripts/staffcommon.js"></script>
+    <script src="scripts/staffjoblist.js"></script>
+    <script src="css/stafjoblist.css"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+        body {
+            background: url("css/images/bg1.jpg");
+            background-repeat: repeat-y;
+            background-position: center center;
+            background-attachment: scroll;
+            background-size: 100% 100%;
+        }
+
+        .ui-page {
+            background: transparent;
+        }
+
+        .ui-content {
+            background: transparent;
+        }
+
+        .text {
+            color: white;
+            font-size: 16px;
+        }
+
+        .boarder {
+            border: 8px inset rgba(28,110,164,0.45);
+            border-radius: 33px 40px 40px 40px;
+            background: linear-gradient(#,#de4848 )
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .imgbox {
+            display: grid;
+            height: 100%;
+        }
+
+        .center-fit {
+            max-width: 100%;
+            max-height: 100vh;
+            margin: auto;
+            border-radius: 33px 40px 40px 40px;
+            border: 8px inset rgba(28,110,164,0.45);
+        }
+
+
+
+        /* Left transition */
+        li.ui-li.left {
+            -webkit-transition: -webkit-transform 250ms ease;
+            -webkit-transform: translateX(-100%);
+            -moz-transition: -moz-transform 250ms ease;
+            -moz-transform: translateX(-100%);
+            -o-transition: -o-transform 250ms ease;
+            -o-transform: translateX(-100%);
+            transition: transform 250ms ease;
+            transform: translateX(-100%);
+            border-top-width: 0; /* We switch to border bottom on previous list item */
+            border-right-width: 1px;
+        }
+        /* Right transition */
+        li.ui-li.right {
+            -webkit-transition: -webkit-transform 250ms ease;
+            -webkit-transform: translateX(100%);
+            -moz-transition: -moz-transform 250ms ease;
+            -moz-transform: translateX(100%);
+            -o-transition: -o-transform 250ms ease;
+            -o-transform: translateX(100%);
+            transition: transform 250ms ease;
+            transform: translateX(100%);
+            border-top-width: 0; /* We switch to border bottom on previous list item */
+            border-left-width: 1px;
+        }
+        /* Border bottom for the previous list item during the transition*/
+        li.ui-li.border {
+            border-bottom-width: 1px;
+        }
+        /* Hide the delete button on touch devices */
+        .touch .delete {
+            display: none;
+        }
+
+        .touch .ui-link-inherit {
+            padding-right: 15px !important;
+        }
+        /* Custom styling for the popup */
+        #confirm {
+            border: 1px solid;
+            border-color: #044062; /* Fallback for older browsers */
+            border-color: rgba(4,64,98,.4);
+            background: #456f9a; /* Fallback for older browsers */
+            background: rgba(69,111,154,.8);
+            -moz-box-shadow: 0 2px 6px rgba(69,111,154,.5), inset 0 1px rgba(255,255,255,.3), inset 0 6px rgba(255,255,255,.1), inset 0 10px 20px rgba(255,255,255,.25), inset 0 -15px 30px rgba(69,111,154,.3);
+            -webkit-box-shadow: 0 2px 6px rgba(69,111,154,.5), inset 0 1px rgba(255,255,255,.3), inset 0 6px rgba(255,255,255,.1), inset 0 10px 20px rgba(255,255,255,.25), inset 0 -15px 30px rgba(69,111,154,.3);
+            box-shadow: 0 2px 6px rgba(69,111,154,.5), inset 0 1px rgba(255,255,255,.3), inset 0 6px rgba(255,255,255,.1), inset 0 10px 20px rgba(255,255,255,.25), inset 0 -15px 30px rgba(69,111,154,.3);
+            max-width: 250px;
+        }
+
+            #confirm p {
+                color: #fff;
+                text-shadow: 0 1px 1px rgba(0,0,0,.6);
+                margin-bottom: .75em;
+            }
+            /* Make the buttons inherit the popup border-radius (.ui-corner-all) */
+            #confirm div, #confirm .ui-btn-corner-all {
+                -webkit-border-radius: inherit;
+                border-radius: inherit;
+            }
+
+            #confirm #cancel {
+                background-image: none;
+            }
+
+            #confirm .topic.ui-li-desc {
+                font-size: inherit; /* The cloned topic will have class ui-li-desc so we negate the font-size settings of this class */
+                text-align: center;
+            }
+
+    </style>
+    <title>Civil Service Club</title>
+</head>
+<body>
+    <div data-role="page" id="sample-page" data-title="Inbox" data-theme="d" data-url="sample-page">
+        <div data-role="header" data-position="fixed" data-theme="b">
+            <h1>Job List</h1>
+            <a href="#demo-intro" data-rel="back" data-icon="arrow-l" data-iconpos="notext">Back</a>
+            <a href="#" onclick="window.location.reload()" data-icon="back" data-iconpos="notext">Refresh</a>
+        </div><!-- /header -->
+        <div data-role="content">
+            <ul id="list" data-role="listview" data-icon="false" data-split-icon="delete" data-split-theme="d">
+                <li id="job1">
+                    <a href="#jobdetail1">
+                        <h3>HouseKeeping </h3>
+                        <p class="topic"><strong>Re: Latest by Tonight</strong></p>
+                        <p>Delivery 2 extra bed latest at room 128 at 9:00 PM tonight. Can't wait! </p>
+                        <p class="ui-li-aside"><strong>9:00</strong>PM</p>
+                    </a>
+                    <a href="#" class="delete">Completed</a>
+                </li>
+                <li>
+                    <a href="#jobdetail2">
+                        <h3>HouseKeeping</h3>
+                        <p class="topic"><strong>Re: Latest by Tonight </strong></p>
+                        <p>Delivery 2 extra towers latest at room 128 at 7:00 PM tonight. Can't wait! </p>
+                        <p class="ui-li-aside"><strong>4:37</strong>PM</p>
+                    </a>
+                    <a href="#" class="delete">Completed</a>
+                </li>
+                <li>
+                    <a href="#jobdetail3">
+                        <h3>Ticket Gentry</h3>
+                        <p class="topic"><strong>Re: Tomorrow 10:00 AM</strong></p>
+                        <p>Scan tickets for event at function room 2</p>
+                        <p class="ui-li-aside"><strong>10:00</strong>AM</p>
+                    </a>
+                    <a href="#" class="delete">Completed</a>
+                </li>
+            </ul>
+        </div><!-- /content -->
+        <div id="confirm" class="ui-content" data-role="popup" data-theme="none">
+            <p id="question">Are you sure you have completed this work?</p>
+            <div class="ui-grid-a">
+                <div class="ui-block-a">
+                    <a id="yes" data-role="button" data-mini="true" data-shadow="false" data-theme="b" data-rel="back">Yes</a>
+                </div>
+                <div class="ui-block-b">
+                    <a id="cancel" data-role="button" data-mini="true" data-shadow="false" data-theme="b" data-rel="back">Cancel</a>
+                </div>
+            </div>
+        </div><!-- /popup -->
+
+    </div>
+
+
+
+    <div data-role="page" data-dialog="true" id="jobdetail1">
+            <div data-role="header" class="ui-content">
+                <center>
+                    <h1>Job detail</h1>
+                    <h3>HouseKeeping </h3><br />
+                    <p class="topic"><strong>Re: Latest by Tonight</strong></p><br />
+                    <p>Delivery 2 extra bed latest at room 128 at 9:00 PM tonight. Can't wait! </p><br />
+                    <p class="ui-li-aside"><strong>9:00</strong>PM</p>
+                </center>
+            </div>
+        </div>
+
+    <div data-role="page" data-dialog="true" id="jobdetail2">
+        <div data-role="header" class="ui-content">
+            <center>
+                <h1>Job detail</h1>
+                <h3>HouseKeeping</h3>
+                <p class="topic"><strong>Re: Latest by Tonight </strong></p>
+                <p>Delivery 2 extra towers latest at room 128 at 7:00 PM tonight. Can't wait! </p>
+                <p class="ui-li-aside"><strong>4:37</strong>PM</p>
+            </center>
+        </div>
+    </div>
+    
+    <div data-role="page" data-dialog="true" id="jobdetail3">
+    <div data-role="header" class="ui-content">
+        <center>
+            <h1>Job detail</h1>
+            <h3>Ticket Gentry</h3>
+            <p class="topic"><strong>Re: Tomorrow 10:00 AM</strong></p>
+            <p>Scan tickets for event at function room 2</p>
+            <p class="ui-li-aside"><strong>10:00</strong>AM</p>
+        </center>
+    </div>
+</div>        
+</body>
+</html>
