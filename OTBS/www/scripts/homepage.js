@@ -17,6 +17,20 @@
             window.location = "index.html";
         });
 
+        $("#direction").bind("click", function () {
+            window.location = "direction.html";
+        });
+
+        $("#shuttle").bind("click", function () {
+            window.location = "shuttle.html";
+        });
+
+        $("#notification").bind("click", function () {
+            window.location = "notification.html";
+        });
+
+
+
         $("#btnNews").bind("click", function () {
             window.location = "news.html";
         });
