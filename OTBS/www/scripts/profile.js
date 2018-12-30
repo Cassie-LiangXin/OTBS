@@ -27,21 +27,20 @@
             description = $("#description").val();
             DOB = $("#DOB").val();
             email = $("#email").val();
-            $('#updatedprofile').append("<br>"
-                + "Userid:  "
-                + userid + "<br>"
-                + firstname + ""
-                + lastname + "<br>"
-                + "description:  "
-                + description + "<br>"
-                + "DOB="
-                + DOB + "<br>"
-                + "email="
-                + email + "<br>"
-        + "<button onclick='window.location=&quot;deleteitem.html?itemid=" + arr[i].itemID + "&quot;'>Delete Item</button>"
-                + "<hr>"
-            );
-            //window.location = "homepage.html";
+
+
+
+            localStorage.setItem("userid", userid);
+            localStorage.setItem("firstname", firstname);
+            localStorage.setItem("lastname", lastname);
+            localStorage.setItem("description", description);
+            localStorage.setItem("DOB", DOB);
+            localStorage.setItem("email", email);
+           
+        });
+        $("#savedialoglink").bind("click", function () {
+            
+            window.location = "profileresult.html";
         });
     });
 

@@ -48,3 +48,6 @@ function gotosurvey() { window.location = "customersurvey.html"; }
 function reservation() {
     window.location = "reservations.html";
 }
+function gohomepage() {
+    window.location = "homepage.html";
+}

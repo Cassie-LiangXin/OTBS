@@ -39,7 +39,7 @@
         }
         .text {
             color: white;
-            font-size: 16px;
+            font-size: 26px;
         }
         .boarder {
             border: 8px inset rgba(28,110,164,0.45);
@@ -86,10 +86,16 @@
             }
 
         .headertext {
-            font-family: 'Colonna MT';
+            font-family: 'Juice ITC';
             color: crimson;
-            background-color: peachpuff;
+            background-color: aliceblue;
             font-size: 50px;
+        }
+        header{
+            background: transparent;
+        }
+        .ui-page .ui-header {
+            background: transparent;
         }
 </style>
 </head>
@@ -97,14 +103,14 @@
 
 <body>
     <div data-role="header">
-        <a id="btnlogout" class="ui-btn">Logout</a><h1>Welcome</h1>
+        <a id="btnlogout" class="ui-btn-icon-left">Logout</a><h1 class="text">Welcome</h1>
         <a class="ui-icon-bars ui-btn-icon-right" id="sidebarSettingopen">Menu</a>
     </div>
 
     <div  id="homepage" class="text">
         <div>
             <center> <h1 class="headertext" >Civil service club</h1></center>
-            <br />
+         
 
             <center>  <a class="button" id="btnReservation">My Bookings</a></center>
             <br />
