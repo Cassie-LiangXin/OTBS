@@ -1,0 +1,96 @@
+﻿<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+
+    <link rel="stylesheet" type="text/css" href="css/profile.css">
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.5.css">
+
+    <script src="lib/jquery-1.11.2.min.js"></script>
+    <script src="lib/jquery.mobile-1.4.5.min.js"></script>
+    <script src="lib/jquery.validate.min.js"></script>
+    <script src="scripts/profile.js"></script>
+    <script src="scripts/common.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+        body {
+            background: url("css/images/bg.png");
+            background-repeat: repeat-y;
+            background-position: center center;
+            background-attachment: scroll;
+            background-size: 100% 100%;
+        }
+
+        .ui-page {
+            background: transparent;
+        }
+
+        .ui-content {
+            background: transparent;
+        }
+
+        .text {
+            color: white;
+            font-size: 16px;
+        }
+    </style>
+
+    <script>
+        window.onload = function () {
+
+            var chart = new CanvasJS.Chart("chartContainer", {
+                exportEnabled: true,
+                animationEnabled: true,
+                title: {
+                    text: "Usage of Facilities at CSC Changi"
+                },
+                legend: {
+                    cursor: "pointer",
+                    itemclick: explodePie
+                },
+                data: [{
+                    type: "pie",
+                    showInLegend: true,
+                    toolTipContent: "{name}: <strong>{y}%</strong>",
+                    indexLabel: "{name} - {y}%",
+                    dataPoints: [
+                        { y: 59, name: "Barbeque Stations", exploded: true },
+                        { y: 5, name: "Child Friendly Amenities" },
+                        { y: 21, name: "Bike Sharing/Buggies" },
+                        { y: 3, name: "Dog Friendly Chalets" },
+                        { y: 12, name: "Sea Sports" },
+
+                    ]
+                }]
+            });
+            chart.render();
+        }
+
+        function explodePie(e) {
+            if (typeof (e.dataSeries.dataPoints[e.dataPointIndex].exploded) === "undefined" || !e.dataSeries.dataPoints[e.dataPointIndex].exploded) {
+                e.dataSeries.dataPoints[e.dataPointIndex].exploded = true;
+            } else {
+                e.dataSeries.dataPoints[e.dataPointIndex].exploded = false;
+            }
+            e.chart.render();
+
+        }
+    </script>
+    <title>Civil Service Club</title>
+</head>
+<body>
+    <div data-role="page" id="mainpage" class="text">
+        <div data-role="header">
+            <h1>Infographics</h1>
+            <a data-rel="back" id="back" class="ui-btn ui-icon-home ui-btn-icon-left">Back</a>
+            <a data-rel="back" id="logout" data-icon="power" class="ui-btn-right">Logout</a>
+        </div>
+
+            <div id="chartContainer" style="height: 350px; width: 100%;"></div>
+            <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+        </div>
+        </body>
+        </html>

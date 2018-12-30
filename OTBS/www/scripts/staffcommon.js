@@ -52,7 +52,15 @@
         $("#btnqrscan").bind("click", function () {
             window.location = "https://webqr.com/";
         });
-
+        $("#chart").bind("click", function () {
+            window.location = "staffcharts.html";
+        });
+        $("#ratings").bind("click", function () {
+            window.location = "ratingchart.html";
+        });
+        $("#piechart").bind("click", function () {
+            window.location = "usagechart.html";
+        });
     });
 
 })();

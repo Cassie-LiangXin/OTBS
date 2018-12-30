@@ -1,0 +1,94 @@
+﻿<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+
+    <link rel="stylesheet" type="text/css" href="css/profile.css">
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.5.css">
+
+    <script src="lib/jquery-1.11.2.min.js"></script>
+    <script src="lib/jquery.mobile-1.4.5.min.js"></script>
+    <script src="lib/jquery.validate.min.js"></script>
+    <script src="scripts/profile.js"></script>
+    <script src="scripts/common.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+        body {
+            background: url("css/images/bg.png");
+            background-repeat: repeat-y;
+            background-position: center center;
+            background-attachment: scroll;
+            background-size: 100% 100%;
+        }
+
+        .ui-page {
+            background: transparent;
+        }
+
+        .ui-content {
+            background: transparent;
+        }
+
+        .text {
+            color: white;
+            font-size: 16px;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+
+            var chart = new CanvasJS.Chart("chartContainer", {
+                animationEnabled: true,
+
+                title: {
+                    text: "Ratings of Facilities at CSC Changi"
+                },
+                axisX: {
+                    interval: 1
+                },
+                axisY2: {
+                    interlacedColor: "rgba(1,77,101,.2)",
+                    gridColor: "rgba(1,77,101,.1)",
+                    title: "Ratings (*)"
+                },
+                data: [{
+                    type: "bar",
+                    name: "companies",
+                    axisYType: "secondary",
+                    color: "#014D65",
+                    dataPoints: [
+                        { y: 5, label: "Sea Sports" },
+                        { y: 7, label: "Dog Friendly Chalets" },
+                        { y: 8, label: "Bike Sharing/Buggies" },
+                        { y: 7, label: "Child Friendly Amenities" },
+                        { y: 9, label: "Barbeque Stations" },
+
+                    ]
+                }]
+            });
+            chart.render();
+
+        }
+    </script>
+    <title>Civil Service Club</title>
+</head>
+<body>
+    <div data-role="page" id="mainpage" class="text">
+        <div data-role="header">
+            <h1>Infographics</h1>
+            <a data-rel="back" id="back" class="ui-btn ui-icon-home ui-btn-icon-left">Back</a>
+            <a data-rel="back" id="logout" data-icon="power" class="ui-btn-right">Logout</a>
+        </div>
+
+     
+      
+            <div id="chartContainer" style="height: 350px; width: 100%;"></div>
+            <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+        </div>
+        </body>
+        </html>
+
+        
