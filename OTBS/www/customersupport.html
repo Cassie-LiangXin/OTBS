@@ -34,6 +34,13 @@
             color: white;
             font-size: 16px;
         }
+        .center-fit {
+            max-width: 100%;
+            max-height: 100vh;
+            margin: auto;
+            border-radius: 33px 40px 40px 40px;
+            border: 8px inset #a0304f;
+        }
     </style>
 
     <title>Civil Service Club</title>
@@ -46,37 +53,36 @@
             <a data-rel="back" id="logout" data-icon="power" class="ui-btn-right">Logout</a> <h1>Customer service</h1>
         </div>
 
-
-        <table id="t01">
+        <br /> <br /> <br /> <br /> <br /> <br />        <table id="t01">
 
             <tr>
                 <td>
-                    <button onclick="gotocontactus()">
-                        <img src="css/website_images/cordova.png" style="width:140px;height:80px;">
-                    </button>Contact Us
+                    <center>
+                        <img onclick="gotocontactus()" class="center-fit" src="css/images/contactus.jpeg" style="width:300px;height:150px;">
+                    </center>
                 </td>
                 <td>
-                    <button onclick="gotofaq()">
-                        <img src="css/website_images/cordova.png" style="width:140px;height:80px;">
-                    </button> FAQ
+                    <center>
+                        <img onclick="gotofaq()" class="center-fit" src="css/images/faq.jpeg" style="width:300px;height:150px;">
+                    </center>
                 </td>
 
             </tr>
             <tr>
                 <td>
-                    <button onclick="gotofeedback()">
-                        <img src="css/website_images/cordova.png" style="width:140px;height:80px;">
-                    </button>Feedback to Us
+                    <center>
+                        <img onclick="gotofeedback()" class="center-fit" src="css/images/feedbacktous.jpeg" style="width:300px;height:150px;">
+                    </center>
                 </td>
                 <td>
-                    <button onclick="gotosurvey()">
-                        <img src="css/website_images/cordova.png" style="width:140px;height:80px;">
-                    </button>Survey
+                    <center>
+                        <img onclick="gotosurvey()" class="center-fit" src="css/images/survey.jpeg" style="width:300px;height:150px;">
+                    </center>
                 </td>
 
             </tr>
         </table>
-  
+
 
     </div>
 </body>
