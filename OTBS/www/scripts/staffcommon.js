@@ -55,12 +55,28 @@
         $("#chart").bind("click", function () {
             window.location = "staffcharts.html";
         });
-        $("#ratings").bind("click", function () {
-            window.location = "ratingchart.html";
+        $("#customerhistory").bind("click", function () {
+            window.location = "CustomerHistory.html";
         });
         $("#piechart").bind("click", function () {
             window.location = "usagechart.html";
         });
+        $("#CustomerHistory4").bind("click", function () {
+            window.location = "CustomerHistory4.html";
+        });
+        $("#CustomerHistory3").bind("click", function () {
+            window.location = "CustomerHistory3.html";
+        });
+        $("#CustomerHistory1").bind("click", function () {
+            window.location = "CustomerHistory1.html";
+        }); 
+        $("#CustomerHistory2").bind("click", function () {
+            window.location = "CustomerHistory2.html";
+        });
+        $("#home").bind("click", function () {
+            window.location = "staffcharts.html";
+        }); 
+
     });
 
 })();

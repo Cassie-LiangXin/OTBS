@@ -1,0 +1,86 @@
+﻿<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+
+    <link rel="stylesheet" type="text/css" href="css/profile.css">
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.5.css">
+
+    <script src="lib/jquery-1.11.2.min.js"></script>
+    <script src="lib/jquery.mobile-1.4.5.min.js"></script>
+    <script src="lib/jquery.validate.min.js"></script>
+    <script src="scripts/profile.js"></script>
+    <script src="scripts/staffcommon.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+        body {
+            background: url("css/images/bg.png");
+            background-repeat: repeat-y;
+            background-position: center center;
+            background-attachment: scroll;
+            background-size: 100% 100%;
+        }
+
+        .ui-page {
+            background: transparent;
+        }
+
+        .ui-content {
+            background: transparent;
+        }
+
+        .text {
+            color: white;
+            font-size: 16px;
+        }
+    </style>
+
+    <script>
+        window.onload = function () {
+
+            var chart = new CanvasJS.Chart("chartContainer", {
+                animationEnabled: true,
+                theme: "light2",
+                title: {
+                    text: "Accumulated app visits by customer in 2018"
+                },
+                axisY: {
+                    includeZero: false
+                },
+                data: [{
+                    type: "line",
+                    dataPoints: [
+                        { y: 5, label: "January" },
+                        { y: 5, label: "Febuary" },
+                        { y: 9, label: "March", indexLabel: "highest", markerColor: "red", markerType: "triangle" },
+                        { y: 1, label: "April" },
+                        { y: 3, label: "May" },
+                        { y: 0, label: "June", indexLabel: "lowest", markerColor: "DarkSlateGrey", markerType: "cross" },
+                        { y: 1, label: "July" },
+                        { y: 8, label: "August" },
+                        { y: 2, label: "September" },
+                        { y: 3, label: "October" },
+                        { y: 1, label: "November" },
+                        { y: 5, label: "December" },
+
+                    ]
+                }]
+            });
+            chart.render();
+
+        }
+    </script>
+</head>
+<body>
+    <h1 style="font-family:'Times New Roman', Times, serif;">Customer Dashboard</h1>
+    <div align="right">
+        <button id="CustomerHistory1">Next</button>
+    </div>
+
+    <div id="chartContainer" style="height: 300px; width: 100%;"></div>
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+</body>
+</html>
