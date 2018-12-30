@@ -24,5 +24,8 @@
     $("#btnEvent").bind("click", function () {
         window.location = "bookevent.html";
     });
+    $("#ratings").bind("click", function () {
+        window.location = "ratingchart.html";
+    });
 
 })();
