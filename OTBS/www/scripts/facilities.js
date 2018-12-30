@@ -17,7 +17,9 @@
         $("#btnhomepage").bind("click", function () {
             window.location = "homepage.html";
         });
-
+        $("#logout").bind("click", function () {
+            window.location = "index.html";
+        });
     });
 
 })();
