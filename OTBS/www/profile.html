@@ -47,80 +47,85 @@
             <a data-rel="back" id="back" class="ui-btn ui-icon-home ui-btn-icon-left">Back</a>
             <a data-rel="back" id="logout" data-icon="power" class="ui-btn-right">Logout</a>
         </div>
-        
-    
+
+
         <div data-role="content" class="ui-content" id="profilesection">
 
-            
 
-                <!-- myimg is a placeholder for profile images -->
-                <img src="css/website_images/desk.jpg" style="width:120px;height:120px;">
 
-                <!-- press [Change Picture] to change the profile image -->
-                <form>
-                    <br /><label for="file-1">Profile Picture(optional): </label>
-                    <input type="file" data-clear-btn="false" name="file-1" id="file-1" value="">
-                </form>
+            <!-- myimg is a placeholder for profile images -->
+            <img src="css/images/profile.jpeg" style="width:120px;height:120px;">
 
-                <hr>
+            <!-- press [Change Picture] to change the profile image -->
+            <form>
+                <br /><label for="file-1">Profile Picture(optional): </label>
+                <input type="file" data-clear-btn="false" name="file-1" id="file-1" value="">
+            </form>
 
-                <!-- form to make changes to profile -->
-                <form name="ProfileForm">
+            <hr>
 
-                    <label for="userid">User Name</label>
-                    <input type="text" name="userid" id="userid" placeholder="enter userid" value="peter" disabled>
+            <!-- form to make changes to profile -->
+            <form name="ProfileForm">
 
-                    <!--First Name-->
-                    <label for="firstname">First Name</label>
-                    <input type="text" name="firstname" id="firstname" placeholder="enter first name" value="Peter" />
+                <label for="userid">User Name</label>
+                <input type="text" name="userid" id="userid" placeholder="enter userid">
 
-                    <!--Last Name-->
-                    <label for="lastname">Last Name</label>
-                    <input type="text" name="lastname" id="lastname" placeholder="enter last name" value="Lim" />
+                <!--First Name-->
+                <label for="firstname">First Name</label>
+                <input type="text" name="firstname" id="firstname" placeholder="enter first name" disabled />
 
-                    <!-- Description -->
-                    <label for="description">About Me:</label>
+                <!--Last Name-->
+                <label for="lastname">Last Name</label>
+                <input type="text" name="lastname" id="lastname" placeholder="enter last name" disabled />
 
-                    <!-- textarea to enter new description -->
-                    <textarea rows="8" name="description" id="description">
-I find myself to be a nice person with likeable qualities. 
-I normally book chalets to celebrate special ocassions, such as friends and families birthdays.
+                <!-- Description -->
+                <label for="description">About Me:</label>
+
+                <!-- textarea to enter new description -->
+                <textarea rows="8" name="description" id="description">
+
                 </textarea>
 
-                    <!-- DOB-->
-                    <label for="DOB">Date of Birth</label>
-                    <input type="date" name="DOB" id="DOB" placeholder="enter DOB" value="2000-01-01" />
+                <!-- DOB-->
+                <label for="DOB">Date of Birth</label>
+                <input type="date" name="DOB" id="DOB" placeholder="enter DOB" />
 
-                    <!-- Email-->
-                    <label for="email">Email</label>
-                    <input type="email" name="email" id="email" placeholder="enter email" value="xyz@mail.com" />
+                <!-- Email-->
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" placeholder="enter email" />
 
-                    <!-- To change password, enter old password -->
-                    <label for="password">Old Password</label>
-                    <input type="text" name="oldpassword" id="oldpassword" placeholder="enter password" value="peter">
+                <!-- To change password, enter old password -->
+                <label for="password">Old Password</label>
+                <input type="text" name="oldpassword" id="oldpassword" placeholder="enter password">
 
-                    <!-- Enter new password -->
-                    <label for="password">New Password</label>
-                    <input type="text" name="newpassword" id="newpassword" placeholder="enter password" value="peter">
+                <!-- Enter new password -->
+                <label for="password">New Password</label>
+                <input type="text" name="newpassword" id="newpassword" placeholder="enter password">
 
-                    <!-- Re-Enter New Password -->
-                    <label for="password">Re-Enter New Password</label>
-                    <input type="text" name="newpasswordagain" id="newpasswordagain" placeholder="enter password again" value="Peter123">
+                <!-- Re-Enter New Password -->
+                <label for="password">Re-Enter New Password</label>
+                <input type="text" name="newpasswordagain" id="newpasswordagain" placeholder="enter password again">
 
-                    <br />
-                    <a href="profileupdatesuccess.html" role="button" id="savedialoglink" class="ui-shadow ui-btn ui-corner-all ui-btn-inline" data-transition="flip">Update Profile</a>
+                <br />
+                <a href="#savedialog" id="profile" role="button" class="ui-shadow ui-btn ui-corner-all ui-btn-inline" data-transition="flip">Update Profile</a>
 
 
-                    <div data-role="page" data-dialog="true" id="savedialog">
-                        <div data-role="header" class="ui-content">
-                            <h2>Profile Updated</h2>
-                            <br />
-                            <h3><a href="homepage.html">homepage</a></h3>
-                        </div>
-                    </div>
-                </form>
+
+            </form>
         </div>
 
+    </div>   
+    <div data-role="page" data-dialog="true" id="savedialog">
+        <div data-role="header" class="ui-content">
+            <h2>Profile Updated</h2>
+            <br />
+            <div id="updatedprofile"></div>
+
+
+
+
+            <h3><button id="savedialoglink">OK</button></h3>
+        </div>
     </div>
 </body>
 </html>
