@@ -1,18 +1,20 @@
 ﻿(function () {
     "use strict";
+
+    //set variables
     var userid= localStorage.getItem("userid");
     var password=localStorage.getItem("password");
     var checkinsatus=localStorage.getItem("checkinsatus");
     $(document).ready(function () {
 
 
-
+        //Condition statement, options avilable to user based on check-in condition 
         if (checkinsatus === "notcheckedin") {
             document.getElementById("option4").style.display = "none";
             document.getElementById("option4text").style.display = "none";
         }
 
-
+        //bind button
         $("#btnlogout").bind("click", function () {
             window.location = "index.html";
         });
@@ -28,8 +30,6 @@
         $("#notification").bind("click", function () {
             window.location = "notification.html";
         });
-
-
 
         $("#btnNews").bind("click", function () {
             window.location = "news.html";
@@ -54,7 +54,7 @@
     
 
         });
-
+        //Javascript for side navigation bar
         /* Set the width of the side navigation to 250px and the left margin of the page content to 250px */
         function openNav() {
             document.getElementById("mySidenav").style.width = "180px";
@@ -67,19 +67,24 @@
             document.getElementById("main").style.marginLeft = "0";
         }
 
+        //set variables
         var myVar;
 
+        //Timmer function
         function myFunction() {
 
             myVar = setTimeout(showPage, 1000);
         }
 
+        //Loader function
         function showPage() {
             document.getElementById("loader").style.display = "none";
             document.getElementById("homepage").style.display = "block";
         }
+
         myFunction();
         showSlides(slideIndex);
+
     showlogin();
     showlogin();
     shownewuser();

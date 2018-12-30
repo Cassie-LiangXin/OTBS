@@ -1,10 +1,11 @@
 ﻿
 (function () {
     "use strict";
+    //set variables
     var button;
     var link;
     $(document).ready(function () {
-
+        //bind buttons
         $("#btnviewreservation").bind("click", function () {
             window.location = "viewreservation.html";
         });

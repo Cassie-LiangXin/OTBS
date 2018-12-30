@@ -1,11 +1,12 @@
 ﻿(function() {
     "use strict";
+    //set variables
     var bed=1;
     var towel = 1;
     var sofa = 1;
     var amenity = 1;
 
-
+    //bind button
     $(document).ready(function () {
         //bed
         $("#addbed").bind("click", function () { 

@@ -1,6 +1,6 @@
 ﻿(function () {
     "use strict";
-
+    //set variables
     var userid;
     var password;
     var checkinsatus;
@@ -39,16 +39,7 @@
             }
         });
         // End login
-        // For Create account
-
-
-
-
-
-
-
-
-        // End create account
+        // For bind button
 
         $("#btnNewUser").bind("click", function () {
             window.location = "newuser.html";

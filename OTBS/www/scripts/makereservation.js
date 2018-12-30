@@ -6,13 +6,7 @@
             window.location = "facilities.html";
         });
     });
-    //Button2
-    $(document).ready(function () {
-        $("#btnFoodDelivery").bind("click", function () {
-            
-            //window.location = "?????.html";
-        });
-    });
+
     //Button3
     $(document).ready(function () {
         $("#btnHouseKeeping").bind("click", function () {

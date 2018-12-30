@@ -3,7 +3,7 @@
 
 
     $(document).ready(function () {
-
+        //bind button
         $("#btnNews").bind("click", function () {
             news();
         });
