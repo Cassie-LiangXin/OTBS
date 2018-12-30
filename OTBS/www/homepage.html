@@ -41,6 +41,49 @@
             color: white;
             font-size: 16px;
         }
+        .boarder {
+            border: 8px inset rgba(28,110,164,0.45);
+            border-radius: 33px 40px 40px 40px;
+            background: linear-gradient(#,#de4848 )
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .imgbox {
+            display: grid;
+            height: 100%;
+        }
+
+        .center-fit {
+            max-width: 100%;
+            max-height: 100vh;
+            margin: auto;
+            border-radius: 33px 40px 40px 40px;
+            border: 8px inset rgba(28,110,164,0.45);
+        }
+
+        .button {
+            background-color: #f4511e;
+            border: none;
+            color: white;
+            padding: 16px 65px;
+            text-align: center;
+            font-size: 16px;
+            margin: 4px 2px;
+            opacity: 0.6;
+            transition: 0.3s;
+            display: inline-block;
+            text-decoration: none;
+            cursor: pointer;
+            border-radius: 33px 40px 40px 40px;
+            background: linear-gradient(#6b0077,#fc6f0b )
+        }
+            .button:hover {
+                opacity: 1
+            }
 </style>
 </head>
 
@@ -54,8 +97,8 @@
     <div  id="homepage" class="text">
         <div>
             <center> <h1>Civil service club</h1></center>
-            <a class="ui-btn ui-icon-user ui-btn-icon-left" id="btnreservelist">My Bookings</a>
-        </div>
+            <center>  <a class="button" id="btnReservation">My Bookings</a></center>
+</div>
 
         <!-- Side navagation bar Start -->
 
@@ -68,36 +111,28 @@
         </div>
 
         <!-- Side navagation bar End -->
-        <div>
+
+        <div class="imgbox">
 
             <table id="t01">
 
                 <tr>
                     <td>
-                        <button id="option1" onclick="gotomakereservationpage()">
-                            <img src="css/website_images/entrance.jpg" style="width:140px;height:80px;" alt="text">
-                        </button><div id="option1text" class="text">Make Reservation</div>
+                        <img class="center-fit" id="option1" onclick="gotomakereservationpage()" src="css/images/make reservations.jpg" style="width:300px;height:150px;" alt="text">
                     </td>
                     <td>
-                        <button id="btnNews">
-                            <img src="css/website_images/event.jpg" style="width:140px;height:80px;" alt="text">
 
-                        </button><div id="option2text" class="text">News</div>
+                        <img class="center-fit" id="btnNews" src="css/images/news.jpg" style="width:300px;height:150px;"  alt="text">
                     </td>
 
                 </tr>
                 <tr>
                     <td>
-                        <button id="option3" onclick="gotocustomerprofile()">
-                            <img src="css/website_images/reservation.jpg" style="width:140px;height:80px;" alt="text">
-                        </button><div id="option3text" class="text">Customer Profile</div>
+                        <img class="center-fit" id="option3" onclick="gotocustomerprofile()" src="css/images/customer profile.jpg" style="width:300px;height:150px;"  alt="text">
                     </td>
                     <td>
-                        <button id="option4" onclick="gotocustomersupport()">
-                            <img src="css/website_images/desk.jpg" style="width:140px;height:80px;" alt="text">
-                        </button><div id="option4text" class="text">Customer Support</div>
+                        <img class="center-fit" id="option4" onclick="gotocustomersupport()" src="css/images/customer support.jpg"style="width:300px;height:150px;" alt="text">
                     </td>
-
                 </tr>
 
             </table>
