@@ -62,34 +62,64 @@
                 <th>Add</th>
                 <th>Delete</th>
             </tr>
+            <tr id="roommakeupsetdiv">
+                <td>Room Makeup Servive</td>
+                <td></td>
+                <td></td>
+                <td>
+                    <select name="roommakeup" id="roommakeup" data-role="slider" data-mini="true">
+                        <option value="noroommakeup">No</option>
+                        <option value="roommakeup" selected="">Yes</option>
+                    </select>
+                </td>
+            </tr>
+            <tr  id="breakfastsetdiv">
+                <td>Breakfast Set</td>
+                <td> <input type="number" id="breakfastvalue" value=0 disabled></td>
+                <td><button id="addbreakfast" class="w3-button w3-circle w3-black">+</button></td>
+                <td><button id="removebreakfast" class="w3-button w3-circle w3-teal">-</button></td>
+            </tr>
+            <tr  id="lunchsetdiv">
+                <td>Lunch Set</td>
+                <td> <input type="number" id="lunchvalue" value=0 disabled></td>
+                <td><button id="addlunch" class="w3-button w3-circle w3-black">+</button></td>
+                <td><button id="removelunch" class="w3-button w3-circle w3-teal">-</button></td>
+            </tr>
+            <tr  id="dinnersetdiv">
+                <td>Dinner Set</td>
+                <td> <input type="number" id="dinnervalue" value=0 disabled></td>
+                <td><button id="adddinner" class="w3-button w3-circle w3-black">+</button></td>
+                <td><button id="removedinner" class="w3-button w3-circle w3-teal">-</button></td>
+            </tr>
             <tr>
                 <td>Bed</td>
-                <td> <input type="number" id="bedvalue" value=1 disabled></td>
+                <td> <input type="number" id="bedvalue" value=0 disabled></td>
                 <td><button id="addbed" class="w3-button w3-circle w3-black">+</button></td>
                 <td><button id="removebed" class="w3-button w3-circle w3-teal">-</button></td>
             </tr>
             <tr>
                 <td>Bath Towels</td>
-                <td> <input type="number" id="towelvalue" value=1 disabled></td>
+                <td> <input type="number" id="towelvalue" value=0 disabled></td>
                 <td><button id="addtowel" class="w3-button w3-circle w3-black">+</button></td>
                 <td><button id="removetowel" class="w3-button w3-circle w3-teal">-</button></td>
             </tr>
             <tr>
                 <td>Sofa</td>
-                <td> <input type="number" id="sofavalue" value=1 disabled></td>
+                <td> <input type="number" id="sofavalue" value=0 disabled></td>
                 <td><button id="addsofa" class="w3-button w3-circle w3-black">+</button></td>
                 <td><button id="removesofa" class="w3-button w3-circle w3-teal">-</button></td>
             </tr>
             <tr>
                 <td>Amenity(set)</td>
-                <td> <input type="number" id="amenityvalue" value=1 disabled></td>
+                <td> <input type="number" id="amenityvalue" value=0 disabled></td>
                 <td><button id="addamenity" class="w3-button w3-circle w3-black">+</button></td>
                 <td><button id="removeamenity" class="w3-button w3-circle w3-teal">-</button></td>
             </tr>
         </table>
 
-        <a href="#housekeepingialog" role="button" class="ui-shadow ui-btn ui-corner-all ui-btn-inline" data-transition="flip">Submit</a>
-
+        <center>
+            <a href="#housekeepingialog" role="button" class="ui-shadow ui-btn ui-corner-all ui-btn-inline" data-transition="flip">Submit</a>
+        </center>  
     </div>
 
     <div data-role="page" data-dialog="true" id="housekeepingialog">

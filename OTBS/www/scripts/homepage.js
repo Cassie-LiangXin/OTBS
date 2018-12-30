@@ -4,15 +4,11 @@
     //set variables
     var userid= localStorage.getItem("userid");
     var password=localStorage.getItem("password");
-    var checkinsatus=localStorage.getItem("checkinsatus");
+   
     $(document).ready(function () {
 
 
-        //Condition statement, options avilable to user based on check-in condition 
-        if (checkinsatus === "notcheckedin") {
-            document.getElementById("option4").style.display = "none";
-            document.getElementById("option4text").style.display = "none";
-        }
+  
 
         //bind button
         $("#btnlogout").bind("click", function () {
